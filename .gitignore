@@ -11,4 +11,4 @@ summative/FlutterApp/.idea/
 *.iml
 
 # OS
-.DS_Store
+.DS_Storeuv run python -c "import sklearn, fastapi; print(sklearn.__version__, fastapi.__version__)"
