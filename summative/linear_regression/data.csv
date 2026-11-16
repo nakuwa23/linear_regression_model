@@ -1,0 +1,1372 @@
+Country,AgeGroup,Education,YearsCode,WorkExp,WorkMode,OrgSize,EmploymentType,RoleGroup,OnlineCourses,SurveyYear,AnnualPayUSD
+Nigeria,25-34,Bachelor's degree,8.0,6.0,Remote,20-99,Employed and freelancing,Full-stack developer,1,2023,120000.0
+Egypt,25-34,Master's degree,5.0,5.0,Hybrid,"500-4,999",Employed,Other tech role,1,2023,7000.0
+Morocco,25-34,Bachelor's degree,5.0,3.0,Hybrid,Freelancer (just me),Employed,Full-stack developer,0,2023,12851.0
+Egypt,18-24,Bachelor's degree,4.0,2.0,Remote,Under 20,Employed,Back-end developer,1,2023,3247.0
+Other African country,18-24,Bachelor's degree,4.0,1.0,In-person,Under 20,Employed,Full-stack developer,1,2023,5715.0
+Other African country,25-34,Bachelor's degree,8.0,8.0,In-person,20-99,Employed,Full-stack developer,1,2023,6000.0
+Tunisia,25-34,Bachelor's degree,3.0,3.0,Remote,Under 20,Employed,Full-stack developer,1,2023,803.0
+Kenya,25-34,Bachelor's degree,3.0,3.0,In-person,20-99,Freelancer or self-employed,Data or AI,0,2023,3026.0
+Other AfricaFirst I put together the data on the surveys for the years available and renamed some of the column names so the same information was consistently named. Only the respondents who had a recorded annual salary were retained from the African countries.
+
+The text based answers were then reduced. Some factors were grouped together, such as education, work arrangement, organisation size, employment type and developer role. I also added a factor to indicate whether or not a person had taken on-line courses.
+
+Numbers and written responses were included in the experience fields, and I translated these into numeric. If no professional experience existed, then I included the years of coding experience, if available.
+
+I left out respondents older than 34 and younger than 18 for analysis. I excluded salaries below $600 and above $300,000 because they may not be realistic annual earnings. If there were some remaining rows with missing values, these were eliminated.
+
+For countries with < 30 responses, these were grouped as “Other African country”. Finally, the cleaned data was saved in a file called `data.csv`.n country,25-34,Master's degree,13.0,9.0,Remote,Freelancer (just me),Freelancer or self-employed,Back-end developer,0,2023,160634.0
+Ethiopia,25-34,Master's degree,8.0,8.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,31171.0
+Other African country,25-34,Master's degree,15.0,10.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,25228.0
+Nigeria,25-34,Bachelor's degree,1.0,1.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,650.0
+Tunisia,25-34,Master's degree,7.0,3.0,Hybrid,"500-4,999",Employed,Data or AI,1,2023,16060.0
+Tunisia,25-34,Master's degree,8.0,3.0,Remote,Under 20,Employed,Data or AI,1,2023,9636.0
+South Africa,25-34,Secondary or less,5.0,13.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,22720.0
+South Africa,25-34,Bachelor's degree,19.0,7.0,Remote,"500-4,999",Employed,Back-end developer,0,2023,47722.0
+Morocco,18-24,Master's degree,6.0,1.0,In-person,Under 20,Employed,Back-end developer,1,2023,13303.0
+Other African country,18-24,Bachelor's degree,5.0,4.0,In-person,Under 20,Employed,Full-stack developer,0,2023,3919.0
+Nigeria,25-34,Bachelor's degree,6.0,5.0,In-person,20-99,Employed,Back-end developer,0,2023,5654.0
+Nigeria,25-34,Bachelor's degree,4.0,3.0,Remote,20-99,Employed,Full-stack developer,1,2023,55564.0
+Tunisia,25-34,Master's degree,5.0,4.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,16702.0
+Algeria,25-34,Master's degree,6.0,2.0,Remote,Under 20,Employed,Full-stack developer,0,2023,6586.0
+Nigeria,18-24,Bachelor's degree,3.0,2.0,Remote,"5,000+",Freelancer or self-employed,Other tech role,1,2023,90981.0
+Other African country,18-24,Bachelor's degree,5.0,5.0,Hybrid,"5,000+",Employed,Mobile developer,1,2023,30000.0
+Other African country,25-34,Master's degree,8.0,3.0,Hybrid,100-499,Employed,Other tech role,1,2023,1225.0
+South Africa,25-34,Secondary or less,13.0,12.0,Remote,20-99,Employed,Back-end developer,0,2023,57059.0
+Tunisia,25-34,Bachelor's degree,8.0,3.0,Remote,Under 20,Employed,Front-end developer,0,2023,3854.0
+Tunisia,25-34,Master's degree,7.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,9636.0
+Kenya,25-34,Bachelor's degree,9.0,8.0,Remote,"500-4,999",Employed,Front-end developer,1,2023,28821.0
+South Africa,25-34,Bachelor's degree,13.0,11.0,Remote,20-99,Employed,Front-end developer,1,2023,72620.0
+Egypt,25-34,Bachelor's degree,15.0,10.0,Remote,Under 20,Employed,Back-end developer,1,2023,8441.0
+Tunisia,25-34,Master's degree,10.0,4.0,Remote,"500-4,999",Employed,Back-end developer,1,2023,14993.0
+Other African country,18-24,Bachelor's degree,4.0,1.0,Hybrid,Under 20,Employed,Other tech role,1,2023,1960.0
+Morocco,25-34,Master's degree,4.0,3.0,Hybrid,20-99,Employed,Mobile developer,0,2023,24979.0
+Morocco,18-24,"Some university, no degree",6.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,10000.0
+Algeria,25-34,Master's degree,8.0,3.0,Remote,Under 20,Employed,Full-stack developer,0,2023,12000.0
+Morocco,18-24,Bachelor's degree,6.0,1.0,Hybrid,100-499,Employed,Front-end developer,1,2023,11824.0
+Other African country,25-34,Master's degree,9.0,4.0,Hybrid,20-99,Freelancer or self-employed,Other tech role,1,2023,1392.0
+Ghana,18-24,"Some university, no degree",7.0,3.0,Remote,Under 20,Employed and freelancing,Full-stack developer,0,2023,31946.0
+Morocco,18-24,Bachelor's degree,8.0,5.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,5912.0
+Other African country,18-24,Bachelor's degree,5.0,3.0,Hybrid,100-499,Employed,Front-end developer,1,2023,9121.0
+Algeria,18-24,Doctorate or professional degree,51.0,51.0,Hybrid,"5,000+",Employed,Other tech role,0,2023,37776.0
+South Africa,25-34,"Some university, no degree",10.0,10.0,Remote,100-499,Employed,Full-stack developer,1,2023,36310.0
+Nigeria,25-34,Bachelor's degree,9.0,5.0,Hybrid,Under 20,Freelancer or self-employed,Other tech role,1,2023,46478.0
+Other African country,25-34,"Some university, no degree",7.0,3.0,Remote,Under 20,Employed,Other tech role,1,2023,25000.0
+South Africa,25-34,Bachelor's degree,9.0,11.0,In-person,20-99,Employed and freelancing,Other tech role,1,2023,67433.0
+Other African country,25-34,Bachelor's degree,5.0,2.0,In-person,20-99,Employed,Full-stack developer,1,2023,8045.0
+Nigeria,25-34,Bachelor's degree,7.0,6.0,Hybrid,"5,000+",Employed,Back-end developer,1,2023,1191.0
+South Africa,25-34,Master's degree,10.0,5.0,Remote,20-99,Employed,Data or AI,0,2023,77807.0
+Kenya,25-34,Bachelor's degree,10.0,7.0,In-person,"500-4,999",Employed,Data or AI,1,2023,21616.0
+South Africa,18-24,Secondary or less,4.0,4.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,25936.0
+South Africa,25-34,Master's degree,9.0,2.0,Hybrid,20-99,Employed,Back-end developer,1,2023,13487.0
+South Africa,25-34,Bachelor's degree,7.0,5.0,In-person,Under 20,Employed and freelancing,Full-stack developer,1,2023,24898.0
+Egypt,18-24,Bachelor's degree,4.0,4.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,6493.0
+South Africa,25-34,"Some university, no degree",12.0,12.0,Remote,Under 20,Employed,Full-stack developer,1,2023,4980.0
+Morocco,25-34,Master's degree,4.0,1.0,Hybrid,Under 20,Employed,Front-end developer,1,2023,7095.0
+Egypt,25-34,Master's degree,7.0,10.0,Hybrid,20-99,Employed,Other tech role,1,2023,45000.0
+Egypt,25-34,Bachelor's degree,6.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2023,30000.0
+South Africa,25-34,Master's degree,17.0,10.0,Remote,20-99,Employed and freelancing,Other tech role,0,2023,107090.0
+Ethiopia,18-24,Bachelor's degree,5.0,2.0,In-person,"5,000+",Employed,Full-stack developer,0,2023,2750.0
+South Africa,25-34,Bachelor's degree,13.0,10.0,Remote,20-99,Employed,Front-end developer,0,2023,44506.0
+Kenya,25-34,"Some university, no degree",7.0,1.0,Remote,20-99,Employed,Back-end developer,0,2023,24000.0
+Other African country,18-24,Bachelor's degree,6.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Mobile developer,1,2023,4827.0
+Kenya,25-34,Bachelor's degree,11.0,6.0,Remote,100-499,Employed,Full-stack developer,1,2023,11240.0
+South Africa,25-34,"Some university, no degree",8.0,3.0,Remote,20-99,Employed,Other tech role,1,2023,12449.0
+South Africa,25-34,"Some university, no degree",19.0,8.0,Remote,Under 20,Employed,Back-end developer,1,2023,57474.0
+Kenya,18-24,"Some university, no degree",1.0,2.0,In-person,Under 20,Freelancer or self-employed,Front-end developer,1,2023,1729.0
+South Africa,25-34,Master's degree,16.0,10.0,In-person,Under 20,Employed,Other tech role,0,2023,41497.0
+Kenya,25-34,Bachelor's degree,7.0,7.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,12970.0
+South Africa,18-24,Secondary or less,6.0,3.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,2075.0
+South Africa,25-34,"Some university, no degree",9.0,7.0,Remote,100-499,Employed,Full-stack developer,0,2023,25936.0
+South Africa,25-34,Bachelor's degree,16.0,10.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2023,21786.0
+Egypt,25-34,Bachelor's degree,9.0,5.0,Hybrid,"5,000+",Employed,Other tech role,1,2023,22726.0
+South Africa,18-24,Associate degree,3.0,0.0,In-person,20-99,Employed,Full-stack developer,1,2023,8092.0
+South Africa,25-34,"Some university, no degree",6.0,4.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,21786.0
+Kenya,25-34,Bachelor's degree,13.0,7.0,Remote,20-99,Freelancer or self-employed,Back-end developer,0,2023,40000.0
+Tunisia,18-24,Bachelor's degree,4.0,1.0,In-person,100-499,Employed,Other tech role,1,2023,3854.0
+Other African country,25-34,Bachelor's degree,12.0,9.0,Hybrid,100-499,Employed,Full-stack developer,0,2023,21048.0
+South Africa,18-24,Associate degree,6.0,3.0,Remote,20-99,Employed,Full-stack developer,1,2023,34235.0
+South Africa,18-24,Bachelor's degree,9.0,3.0,Hybrid,"5,000+",Employed,Full-stack developer,0,2023,4150.0
+South Africa,25-34,Bachelor's degree,13.0,6.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Back-end developer,1,2023,49278.0
+Other African country,25-34,Master's degree,7.0,5.0,In-person,Under 20,Employed,Full-stack developer,1,2023,4036.0
+South Africa,25-34,Secondary or less,15.0,10.0,Hybrid,100-499,Employed,Other tech role,0,2023,178334.0
+Other African country,18-24,Bachelor's degree,4.0,4.0,In-person,20-99,Employed,Full-stack developer,0,2023,971.0
+South Africa,25-34,Bachelor's degree,17.0,9.0,Remote,Under 20,Employed,Data or AI,0,2023,24898.0
+Nigeria,25-34,Bachelor's degree,6.0,5.0,Remote,Under 20,Employed,Back-end developer,1,2023,11048.0
+Kenya,25-34,Bachelor's degree,6.0,5.0,Hybrid,Under 20,Employed,Other tech role,0,2023,1441.0
+South Africa,25-34,Bachelor's degree,15.0,13.0,Remote,100-499,Employed,Full-stack developer,0,2023,51872.0
+Nigeria,18-24,Bachelor's degree,8.0,4.0,Remote,20-99,Employed,Back-end developer,1,2023,57600.0
+Other African country,25-34,Bachelor's degree,9.0,5.0,In-person,20-99,Employed and freelancing,Mobile developer,1,2023,15137.0
+Egypt,25-34,Bachelor's degree,8.0,5.0,Hybrid,20-99,Employed,Mobile developer,1,2023,19479.0
+Other African country,25-34,Secondary or less,11.0,11.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2023,47813.0
+Nigeria,25-34,"Some university, no degree",7.0,3.0,Remote,20-99,Employed,Front-end developer,1,2023,17424.0
+South Africa,25-34,"Some university, no degree",4.0,1.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2023,7470.0
+South Africa,25-34,Bachelor's degree,10.0,6.0,Remote,20-99,Employed,Full-stack developer,0,2023,45439.0
+Nigeria,25-34,Bachelor's degree,15.0,11.0,Remote,20-99,Employed,Full-stack developer,1,2023,67035.0
+South Africa,18-24,Secondary or less,7.0,7.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,36310.0
+Nigeria,25-34,Bachelor's degree,9.0,7.0,In-person,100-499,Employed,Mobile developer,1,2023,14080.0
+Nigeria,25-34,Bachelor's degree,12.0,9.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,119142.0
+South Africa,25-34,Bachelor's degree,13.0,9.0,Hybrid,Under 20,Employed,Other tech role,0,2023,51872.0
+Nigeria,25-34,Bachelor's degree,4.0,2.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,10000.0
+Nigeria,25-34,Bachelor's degree,4.0,2.0,In-person,Under 20,Employed,Full-stack developer,0,2023,6499.0
+South Africa,25-34,Bachelor's degree,16.0,12.0,In-person,Under 20,Employed,Full-stack developer,0,2023,31123.0
+Other African country,18-24,Bachelor's degree,9.0,10.0,In-person,"5,000+",Employed,Data or AI,1,2023,8449.0
+Other African country,18-24,Bachelor's degree,6.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,6532.0
+Nigeria,25-34,Bachelor's degree,4.0,4.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,60000.0
+South Africa,25-34,Master's degree,12.0,10.0,Hybrid,20-99,Employed,Mobile developer,1,2023,51872.0
+Other African country,25-34,Master's degree,5.0,2.0,In-person,Under 20,Employed,Mobile developer,1,2023,1960.0
+Ghana,25-34,Bachelor's degree,10.0,10.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Other tech role,0,2023,2343.0
+Ghana,25-34,Bachelor's degree,8.0,2.0,In-person,20-99,Employed,Full-stack developer,0,2023,7454.0
+Ghana,25-34,Bachelor's degree,4.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Mobile developer,1,2023,887.0
+Egypt,18-24,Bachelor's degree,7.0,3.0,Remote,Under 20,Employed,Data or AI,0,2023,1623.0
+South Africa,18-24,Bachelor's degree,11.0,4.0,Remote,20-99,Employed,Full-stack developer,1,2023,17636.0
+Egypt,18-24,Bachelor's degree,6.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,7792.0
+South Africa,25-34,Bachelor's degree,8.0,6.0,Remote,100-499,Employed,Back-end developer,0,2023,64839.0
+Tunisia,25-34,Master's degree,5.0,2.0,In-person,20-99,Employed,Front-end developer,1,2023,6424.0
+South Africa,25-34,"Some university, no degree",3.0,2.0,Hybrid,20-99,Employed,Other tech role,1,2023,28011.0
+Tunisia,25-34,Master's degree,4.0,3.0,Hybrid,Under 20,Employed,Other tech role,1,2023,4497.0
+Nigeria,25-34,Bachelor's degree,4.0,3.0,Remote,100-499,Employed,Back-end developer,1,2023,57828.0
+South Africa,18-24,"Some university, no degree",9.0,6.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,6225.0
+Tunisia,25-34,Master's degree,10.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Back-end developer,1,2023,6424.0
+Kenya,25-34,Bachelor's degree,5.0,3.0,Hybrid,Freelancer (just me),Employed,Full-stack developer,1,2023,7205.0
+Nigeria,18-24,Bachelor's degree,5.0,3.0,In-person,20-99,Employed,Mobile developer,1,2023,3119.0
+South Africa,25-34,Bachelor's degree,17.0,7.0,Remote,"500-4,999",Employed,Other tech role,0,2023,90775.0
+Nigeria,18-24,Secondary or less,5.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,5000.0
+South Africa,25-34,"Some university, no degree",15.0,13.0,Remote,20-99,Employed,Full-stack developer,1,2023,62246.0
+South Africa,25-34,Master's degree,13.0,5.0,Hybrid,20-99,Employed,Other tech role,1,2023,25936.0
+Egypt,25-34,Bachelor's degree,8.0,7.0,Hybrid,20-99,Employed,Full-stack developer,0,2023,11038.0
+Ghana,25-34,Bachelor's degree,8.0,5.0,In-person,20-99,Employed,Mobile developer,1,2023,5857.0
+South Africa,25-34,Master's degree,3.0,3.0,In-person,100-499,Employed,Full-stack developer,0,2023,21994.0
+South Africa,25-34,Bachelor's degree,11.0,6.0,Hybrid,"5,000+",Employed,Full-stack developer,0,2023,48552.0
+Nigeria,18-24,"Some university, no degree",6.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Data or AI,0,2023,715.0
+South Africa,18-24,Master's degree,3.0,0.5,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,23342.0
+Egypt,25-34,Master's degree,12.0,8.0,Remote,20-99,Employed,Mobile developer,0,2023,38959.0
+South Africa,25-34,Bachelor's degree,13.0,6.0,In-person,"500-4,999",Employed,Back-end developer,1,2023,57059.0
+South Africa,25-34,Bachelor's degree,15.0,7.0,Remote,Under 20,Employed,Back-end developer,0,2023,62246.0
+South Africa,25-34,"Some university, no degree",9.0,7.0,Remote,20-99,Employed,Back-end developer,0,2023,51664.0
+Kenya,18-24,"Some university, no degree",3.0,3.0,Remote,20-99,Employed,Front-end developer,1,2023,3603.0
+Algeria,25-34,Master's degree,10.0,5.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,26345.0
+Tunisia,25-34,Master's degree,6.0,0.0,In-person,Under 20,Employed,Back-end developer,1,2023,707.0
+Morocco,25-34,Secondary or less,4.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,7883.0
+Algeria,25-34,Master's degree,2.0,5.0,In-person,20-99,Employed,Data or AI,1,2023,703.0
+Nigeria,25-34,Bachelor's degree,3.0,2.0,Remote,Under 20,Employed and freelancing,Back-end developer,1,2023,5199.0
+Other African country,18-24,Secondary or less,8.0,6.0,In-person,Under 20,Employed,Other tech role,0,2023,3000.0
+Tunisia,25-34,Master's degree,6.0,3.0,In-person,Under 20,Employed,Full-stack developer,0,2023,2289.0
+Other African country,25-34,Bachelor's degree,5.0,5.0,Hybrid,20-99,Employed,Back-end developer,1,2023,21452.0
+South Africa,25-34,Bachelor's degree,13.0,5.0,In-person,"500-4,999",Employed,Full-stack developer,1,2023,29048.0
+Morocco,25-34,"Some university, no degree",4.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2023,10642.0
+Other African country,18-24,Bachelor's degree,6.0,1.0,In-person,100-499,Employed,Mobile developer,1,2023,11690.0
+South Africa,18-24,Bachelor's degree,5.0,1.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,19919.0
+South Africa,25-34,Bachelor's degree,10.0,10.0,In-person,20-99,Employed,Full-stack developer,0,2023,11204.0
+South Africa,18-24,Associate degree,5.0,2.0,In-person,20-99,Employed,Full-stack developer,1,2023,830.0
+South Africa,18-24,"Some university, no degree",6.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2023,7781.0
+Other African country,25-34,Bachelor's degree,8.0,5.0,In-person,Under 20,Employed,Other tech role,0,2023,15461.0
+Other African country,18-24,Bachelor's degree,7.0,4.0,Remote,20-99,Employed,Back-end developer,1,2023,13618.0
+Ethiopia,25-34,Master's degree,5.0,3.0,In-person,"500-4,999",Employed,Full-stack developer,1,2023,2768.0
+Nigeria,25-34,Associate degree,1.0,2.0,Remote,Freelancer (just me),Employed,Other tech role,0,2023,21775.0
+Tunisia,18-24,Secondary or less,5.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2023,3854.0
+Nigeria,25-34,Bachelor's degree,12.0,7.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2023,77984.0
+South Africa,25-34,Bachelor's degree,15.0,13.0,Hybrid,100-499,Employed,Other tech role,1,2023,77755.0
+Tunisia,25-34,Bachelor's degree,10.0,7.0,Remote,Under 20,Employed and freelancing,Back-end developer,1,2023,18000.0
+Kenya,25-34,Bachelor's degree,9.0,7.0,Remote,"500-4,999",Employed,Back-end developer,1,2023,25219.0
+Nigeria,25-34,Bachelor's degree,3.0,3.0,Remote,20-99,Employed and freelancing,Data or AI,1,2023,17330.0
+South Africa,25-34,Master's degree,10.0,4.0,In-person,Under 20,Employed,Other tech role,0,2023,23342.0
+Other African country,25-34,Bachelor's degree,15.0,8.0,Hybrid,Under 20,Employed,Full-stack developer,0,2023,11401.0
+Nigeria,25-34,Bachelor's degree,12.0,14.0,Remote,Under 20,Employed and freelancing,Other tech role,0,2023,23828.0
+Ghana,18-24,"Some university, no degree",2.0,2.0,In-person,"500-4,999",Employed,Full-stack developer,1,2023,10649.0
+Morocco,25-34,Master's degree,5.0,2.0,In-person,Under 20,Employed,Data or AI,1,2023,10248.0
+Other African country,25-34,Master's degree,15.0,10.0,Hybrid,100-499,Employed,Other tech role,0,2023,163573.0
+Tunisia,25-34,Bachelor's degree,16.0,12.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,0,2023,64239.0
+Nigeria,25-34,Bachelor's degree,2.0,2.0,Remote,100-499,Employed,Full-stack developer,1,2023,5199.0
+Kenya,18-24,Bachelor's degree,3.0,2.0,Hybrid,20-99,Employed,Mobile developer,1,2023,2594.0
+Morocco,25-34,Master's degree,11.0,11.0,In-person,Freelancer (just me),Employed,Back-end developer,1,2023,17737.0
+Other African country,25-34,Associate degree,7.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2023,1960.0
+Other African country,18-24,Bachelor's degree,5.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2023,1960.0
+Kenya,25-34,Bachelor's degree,14.0,9.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,0,2023,68451.0
+Nigeria,25-34,Bachelor's degree,5.0,4.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,15164.0
+Ethiopia,25-34,Bachelor's degree,9.0,7.0,Hybrid,100-499,Employed,Back-end developer,1,2023,11001.0
+South Africa,25-34,Bachelor's degree,7.0,3.0,Hybrid,Under 20,Employed,Other tech role,0,2023,26247.0
+Egypt,25-34,Bachelor's degree,2.0,4.0,Remote,"5,000+",Employed,Data or AI,1,2023,6493.0
+South Africa,25-34,Bachelor's degree,7.0,4.0,Hybrid,20-99,Employed,Full-stack developer,0,2023,32368.0
+Ethiopia,25-34,Master's degree,10.0,9.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,27504.0
+Kenya,25-34,Bachelor's degree,14.0,10.0,Remote,100-499,Employed,Full-stack developer,0,2023,103757.0
+Other African country,25-34,Bachelor's degree,3.0,2.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,10000.0
+Egypt,25-34,Bachelor's degree,8.0,7.0,Remote,100-499,Employed,Other tech role,1,2023,29219.0
+Other African country,25-34,Secondary or less,7.0,5.0,Hybrid,Under 20,Employed,Front-end developer,1,2023,662.0
+Egypt,18-24,Bachelor's degree,6.0,5.0,Remote,Under 20,Employed,Mobile developer,1,2023,3896.0
+Kenya,25-34,"Some university, no degree",6.0,4.0,Remote,100-499,Employed and freelancing,Back-end developer,1,2023,200000.0
+Other African country,25-34,Bachelor's degree,11.0,15.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,26374.0
+Nigeria,25-34,Bachelor's degree,5.0,4.0,Remote,Under 20,Employed and freelancing,Back-end developer,1,2023,12997.0
+South Africa,25-34,"Some university, no degree",8.0,6.0,Remote,"5,000+",Employed,Front-end developer,1,2023,12190.0
+Egypt,18-24,Bachelor's degree,5.0,1.0,Remote,Under 20,Employed and freelancing,Full-stack developer,0,2023,3500.0
+Nigeria,18-24,Bachelor's degree,7.0,7.0,Remote,Under 20,Employed,Full-stack developer,0,2023,5199.0
+South Africa,25-34,Bachelor's degree,16.0,8.0,In-person,20-99,Employed,Other tech role,0,2023,15561.0
+Tunisia,25-34,Bachelor's degree,16.0,13.0,Hybrid,20-99,Freelancer or self-employed,Other tech role,0,2023,32119.0
+Egypt,25-34,Bachelor's degree,6.0,2.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2023,6655.0
+Other African country,25-34,Doctorate or professional degree,4.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,24495.0
+Ethiopia,25-34,Bachelor's degree,4.0,1.0,Remote,Under 20,Employed,Mobile developer,1,2023,2750.0
+Other African country,25-34,Master's degree,10.0,5.0,Hybrid,"500-4,999",Employed and freelancing,Full-stack developer,0,2023,5299.0
+South Africa,18-24,Bachelor's degree,7.0,1.0,In-person,100-499,Employed,Full-stack developer,1,2023,5187.0
+South Africa,18-24,"Some university, no degree",10.0,6.0,Remote,Under 20,Employed,Other tech role,0,2023,30604.0
+Nigeria,25-34,Bachelor's degree,4.0,4.0,Remote,20-99,Employed,Back-end developer,1,2023,15857.0
+Morocco,18-24,Bachelor's degree,5.0,1.0,In-person,Under 20,Employed,Back-end developer,0,2023,8277.0
+Kenya,25-34,"Some university, no degree",12.0,8.0,Hybrid,20-99,Employed,Back-end developer,1,2023,30262.0
+Egypt,25-34,Bachelor's degree,7.0,5.0,In-person,20-99,Employed,Mobile developer,1,2023,7013.0
+Ethiopia,25-34,"Some university, no degree",1.0,1.0,Remote,Freelancer (just me),Employed,Front-end developer,1,2023,1225.0
+Tunisia,25-34,Master's degree,8.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,5781.0
+Kenya,25-34,Bachelor's degree,8.0,3.0,Hybrid,Under 20,Employed,Back-end developer,1,2023,17293.0
+South Africa,25-34,Secondary or less,6.0,6.0,Remote,Freelancer (just me),Employed and freelancing,Full-stack developer,1,2023,28011.0
+South Africa,25-34,Bachelor's degree,10.0,3.0,Remote,"5,000+",Employed,Data or AI,0,2023,45958.0
+Egypt,25-34,Bachelor's degree,3.0,2.0,Remote,Under 20,Employed,Mobile developer,1,2023,10129.0
+Nigeria,25-34,Bachelor's degree,10.0,7.0,Remote,Under 20,Employed and freelancing,Full-stack developer,0,2023,15000.0
+Other African country,25-34,Bachelor's degree,16.0,13.0,Hybrid,Under 20,Freelancer or self-employed,Data or AI,1,2023,4827.0
+Other African country,25-34,Bachelor's degree,3.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,8719.0
+South Africa,25-34,Secondary or less,4.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2023,11204.0
+South Africa,25-34,Bachelor's degree,3.0,1.0,Hybrid,20-99,Employed,Back-end developer,0,2023,15561.0
+Egypt,25-34,Bachelor's degree,11.0,8.0,Remote,20-99,Employed,Front-end developer,1,2023,19479.0
+Algeria,25-34,Master's degree,9.0,6.0,Remote,Under 20,Employed,Other tech role,1,2023,10000.0
+Other African country,25-34,Bachelor's degree,6.0,2.0,Hybrid,Under 20,Employed,Front-end developer,1,2023,6600.0
+South Africa,25-34,"Some university, no degree",12.0,10.0,Remote,20-99,Employed,Full-stack developer,1,2023,31123.0
+Kenya,25-34,Bachelor's degree,7.0,2.0,In-person,"500-4,999",Employed,Other tech role,1,2023,4323.0
+Other African country,25-34,Bachelor's degree,6.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2023,7090.0
+Other African country,25-34,Bachelor's degree,8.0,4.0,In-person,20-99,Employed,Full-stack developer,1,2023,9687.0
+South Africa,18-24,"Some university, no degree",7.0,3.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,15561.0
+South Africa,18-24,"Some university, no degree",8.0,1.0,In-person,20-99,Employed,Full-stack developer,1,2023,14005.0
+Egypt,25-34,Bachelor's degree,10.0,5.0,In-person,"500-4,999",Employed,Mobile developer,1,2023,21427.0
+South Africa,18-24,Secondary or less,7.0,5.0,In-person,20-99,Employed,Full-stack developer,1,2023,839.0
+Morocco,25-34,Master's degree,10.0,6.0,Remote,Under 20,Employed,Full-stack developer,0,2023,16554.0
+Kenya,25-34,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed,Data or AI,1,2023,24426.0
+Other African country,25-34,Bachelor's degree,12.0,9.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2023,18417.0
+Ethiopia,25-34,Bachelor's degree,8.0,5.0,In-person,100-499,Employed,Full-stack developer,1,2023,22003.0
+Tunisia,25-34,Bachelor's degree,7.0,3.0,Remote,100-499,Employed,Full-stack developer,0,2023,35331.0
+Nigeria,25-34,Bachelor's degree,11.0,5.0,Hybrid,100-499,Employed,Back-end developer,0,2023,1300.0
+South Africa,25-34,Bachelor's degree,8.0,3.0,Hybrid,Under 20,Employed,Front-end developer,0,2023,33976.0
+Algeria,25-34,Master's degree,8.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,14636.0
+Morocco,25-34,Bachelor's degree,8.0,3.0,Hybrid,100-499,Employed,Mobile developer,1,2023,17737.0
+Nigeria,25-34,Bachelor's degree,11.0,10.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,11698.0
+Other African country,25-34,"Some university, no degree",3.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,4238.0
+Nigeria,25-34,Bachelor's degree,5.0,2.0,Remote,Under 20,Employed,Front-end developer,1,2023,3379.0
+Other African country,25-34,Bachelor's degree,6.0,4.0,Hybrid,20-99,Employed,Back-end developer,1,2023,9654.0
+Nigeria,18-24,"Some university, no degree",6.0,5.0,Remote,Freelancer (just me),Employed and freelancing,Other tech role,1,2023,4159.0
+Egypt,18-24,Bachelor's degree,8.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Mobile developer,0,2023,38959.0
+South Africa,25-34,Master's degree,7.0,4.0,In-person,"500-4,999",Employed,Other tech role,0,2023,39422.0
+Kenya,25-34,Bachelor's degree,8.0,6.0,In-person,Under 20,Employed,Other tech role,1,2023,17293.0
+Other African country,25-34,Master's degree,10.0,4.0,Remote,20-99,Employed and freelancing,Full-stack developer,0,2023,21418.0
+Nigeria,18-24,Secondary or less,4.0,2.0,Remote,Under 20,Employed,Front-end developer,0,2023,3899.0
+Other African country,25-34,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed and freelancing,Other tech role,1,2023,5276.0
+Egypt,25-34,Bachelor's degree,6.0,1.0,Remote,20-99,Employed,Back-end developer,1,2023,6493.0
+Ethiopia,18-24,"Some university, no degree",6.0,0.5,In-person,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2023,1467.0
+Nigeria,25-34,Bachelor's degree,13.0,8.0,Remote,20-99,Employed,Back-end developer,0,2023,73652.0
+South Africa,25-34,"Some university, no degree",10.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,21662.0
+Other African country,25-34,Bachelor's degree,5.0,4.0,Hybrid,20-99,Employed and freelancing,Front-end developer,1,2023,39466.0
+Nigeria,18-24,Bachelor's degree,3.0,3.0,Remote,20-99,Freelancer or self-employed,Full-stack developer,0,2023,10800.0
+Other African country,18-24,Bachelor's degree,6.0,4.0,Remote,Under 20,Employed,Mobile developer,0,2023,17837.0
+Ethiopia,25-34,Bachelor's degree,4.0,3.0,In-person,20-99,Employed,Back-end developer,1,2023,9168.0
+South Africa,25-34,Bachelor's degree,8.0,8.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,25272.0
+South Africa,25-34,Doctorate or professional degree,18.0,11.0,Remote,20-99,Employed,Other tech role,0,2023,114117.0
+South Africa,25-34,Master's degree,6.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,31123.0
+South Africa,18-24,Secondary or less,2.0,3.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,10115.0
+South Africa,25-34,Bachelor's degree,4.0,2.0,Remote,Under 20,Employed,Full-stack developer,1,2023,18051.0
+South Africa,25-34,Bachelor's degree,18.0,10.0,Remote,20-99,Employed,Full-stack developer,1,2023,31382.0
+South Africa,25-34,Master's degree,7.0,6.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2023,35872.0
+Other African country,25-34,Master's degree,9.0,5.0,In-person,20-99,Employed,Other tech role,1,2023,8132.0
+Algeria,18-24,Master's degree,6.0,1.0,Remote,20-99,Employed,Other tech role,1,2023,19276.0
+South Africa,25-34,Master's degree,9.0,4.0,Remote,20-99,Freelancer or self-employed,Other tech role,0,2023,31123.0
+South Africa,25-34,Bachelor's degree,6.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,14317.0
+Nigeria,18-24,Secondary or less,6.0,3.0,Remote,Under 20,Employed,Full-stack developer,1,2023,1560.0
+South Africa,18-24,"Some university, no degree",9.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,0,2023,15250.0
+Ghana,18-24,Bachelor's degree,5.0,1.0,In-person,"500-4,999",Employed,Full-stack developer,1,2023,3727.0
+Other African country,25-34,Master's degree,10.0,7.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,11561.0
+South Africa,25-34,Bachelor's degree,6.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,1504.0
+South Africa,25-34,Bachelor's degree,6.0,2.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2023,21164.0
+Other African country,25-34,Bachelor's degree,5.0,2.0,Remote,Under 20,Employed and freelancing,Front-end developer,0,2023,8000.0
+Other African country,25-34,Bachelor's degree,8.0,4.0,Remote,Under 20,Employed and freelancing,Front-end developer,1,2023,1470.0
+Ethiopia,18-24,"Some university, no degree",3.0,3.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2023,3080.0
+Other African country,18-24,"Some university, no degree",2.0,0.5,In-person,"500-4,999",Employed,Data or AI,1,2023,4610.0
+Nigeria,18-24,"Some university, no degree",2.0,2.0,Remote,"500-4,999",Employed,Front-end developer,1,2023,1300.0
+South Africa,25-34,Bachelor's degree,23.0,10.0,Hybrid,100-499,Employed,Full-stack developer,0,2023,56021.0
+Other African country,18-24,Bachelor's degree,4.0,4.0,In-person,Under 20,Employed,Full-stack developer,0,2023,1372.0
+Ghana,25-34,Bachelor's degree,8.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2023,1917.0
+Egypt,25-34,"Some university, no degree",3.0,0.5,Remote,Under 20,Employed,Full-stack developer,0,2023,3896.0
+Ghana,25-34,Bachelor's degree,13.0,6.0,Remote,100-499,Employed and freelancing,Full-stack developer,1,2023,6212.0
+Egypt,18-24,Bachelor's degree,6.0,2.0,Hybrid,Under 20,Employed,Back-end developer,1,2023,14610.0
+Ghana,25-34,Bachelor's degree,6.0,2.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2023,4437.0
+Nigeria,18-24,Bachelor's degree,3.0,1.0,Remote,Under 20,Employed,Front-end developer,1,2023,1300.0
+Nigeria,18-24,Bachelor's degree,4.0,2.0,Remote,20-99,Employed,Full-stack developer,1,2023,10831.0
+Kenya,18-24,Master's degree,9.0,6.0,Remote,Under 20,Employed,Full-stack developer,0,2023,48000.0
+Kenya,25-34,Bachelor's degree,7.0,7.0,Hybrid,"500-4,999",Employed,Data or AI,1,2023,1009.0
+South Africa,18-24,Bachelor's degree,6.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,0,2023,14317.0
+Kenya,25-34,Bachelor's degree,3.0,3.0,In-person,Under 20,Employed,Back-end developer,0,2023,5044.0
+South Africa,25-34,Bachelor's degree,20.0,12.0,Remote,100-499,Employed,Other tech role,0,2023,155615.0
+Egypt,25-34,Bachelor's degree,2.0,1.0,In-person,Under 20,Employed and freelancing,Front-end developer,1,2023,2727.0
+South Africa,25-34,Master's degree,13.0,4.0,Hybrid,20-99,Employed,Other tech role,0,2023,28977.0
+Other African country,25-34,Master's degree,15.0,10.0,In-person,20-99,Employed,Full-stack developer,1,2023,10258.0
+South Africa,25-34,"Some university, no degree",17.0,8.0,Hybrid,20-99,Employed,Other tech role,0,2023,13487.0
+South Africa,25-34,Bachelor's degree,14.0,15.0,Hybrid,20-99,Employed,Other tech role,1,2023,67226.0
+Ghana,25-34,"Some university, no degree",3.0,2.0,Remote,Under 20,Employed and freelancing,Front-end developer,1,2023,42000.0
+Kenya,25-34,Bachelor's degree,12.0,9.0,Remote,100-499,Employed,Other tech role,1,2023,93670.0
+Other African country,25-34,Bachelor's degree,9.0,4.0,Remote,"500-4,999",Employed,Back-end developer,0,2023,37005.0
+South Africa,25-34,"Some university, no degree",11.0,9.0,Remote,20-99,Employed,Front-end developer,0,2023,2542.0
+South Africa,25-34,"Some university, no degree",12.0,10.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,3631.0
+Morocco,25-34,Master's degree,6.0,5.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,23156.0
+Other African country,25-34,Master's degree,12.0,10.0,Hybrid,Under 20,Employed,Other tech role,0,2023,19596.0
+South Africa,18-24,Bachelor's degree,10.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,21786.0
+Egypt,25-34,Bachelor's degree,5.0,2.0,Hybrid,20-99,Employed,Other tech role,0,2023,9740.0
+South Africa,25-34,Bachelor's degree,7.0,5.0,Hybrid,"500-4,999",Employed,Data or AI,1,2023,12449.0
+Other African country,25-34,Master's degree,11.0,8.0,Remote,20-99,Employed,Back-end developer,0,2023,200000.0
+South Africa,25-34,Bachelor's degree,14.0,6.0,Remote,Under 20,Employed,Other tech role,0,2023,134866.0
+Morocco,25-34,"Some university, no degree",7.0,7.0,Remote,"500-4,999",Employed and freelancing,Full-stack developer,0,2023,59122.0
+Morocco,25-34,Bachelor's degree,7.0,1.0,In-person,20-99,Employed,Other tech role,1,2023,4730.0
+South Africa,18-24,"Some university, no degree",4.0,2.0,In-person,100-499,Employed,Full-stack developer,0,2023,18674.0
+Kenya,25-34,Bachelor's degree,8.0,4.0,Remote,100-499,Employed,Mobile developer,1,2023,14411.0
+Nigeria,25-34,Bachelor's degree,6.0,5.0,Remote,Under 20,Freelancer or self-employed,Back-end developer,1,2023,25995.0
+Other African country,25-34,Bachelor's degree,10.0,6.0,Remote,"500-4,999",Freelancer or self-employed,Back-end developer,1,2023,60000.0
+Egypt,25-34,Bachelor's degree,15.0,9.0,Remote,100-499,Employed,Full-stack developer,0,2023,18000.0
+South Africa,25-34,Master's degree,8.0,3.0,Hybrid,Under 20,Employed,Other tech role,1,2023,46684.0
+Algeria,25-34,Associate degree,7.0,4.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,1098.0
+Nigeria,25-34,Bachelor's degree,6.0,4.0,Remote,100-499,Employed,Mobile developer,0,2023,67200.0
+Morocco,18-24,Bachelor's degree,6.0,4.0,In-person,Under 20,Employed,Front-end developer,0,2023,5991.0
+Kenya,18-24,Bachelor's degree,6.0,2.0,In-person,100-499,Employed,Back-end developer,0,2023,9207.0
+Egypt,25-34,Bachelor's degree,8.0,4.0,Hybrid,20-99,Employed,Back-end developer,1,2023,8116.0
+Nigeria,25-34,"Some university, no degree",4.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2023,100000.0
+Ethiopia,25-34,Bachelor's degree,14.0,5.0,Remote,"500-4,999",Employed and freelancing,Back-end developer,0,2023,55007.0
+Nigeria,25-34,Bachelor's degree,5.0,3.0,Remote,Under 20,Employed,Front-end developer,1,2023,2166.0
+Egypt,25-34,Bachelor's degree,10.0,9.0,Hybrid,"5,000+",Employed and freelancing,Other tech role,1,2023,17856.0
+Morocco,25-34,Associate degree,3.0,3.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,985.0
+Ghana,25-34,Bachelor's degree,6.0,1.0,Remote,Under 20,Employed,Mobile developer,1,2023,1597.0
+Other African country,25-34,Bachelor's degree,5.0,3.0,Hybrid,"5,000+",Employed,Other tech role,0,2023,158000.0
+Nigeria,18-24,Bachelor's degree,7.0,5.0,Remote,Under 20,Freelancer or self-employed,Back-end developer,0,2023,2599.0
+Egypt,25-34,Bachelor's degree,2.0,1.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2023,7792.0
+Morocco,25-34,Master's degree,13.0,8.0,In-person,20-99,Employed,Back-end developer,1,2023,2956.0
+Nigeria,25-34,Bachelor's degree,9.0,7.0,Remote,"500-4,999",Employed and freelancing,Mobile developer,1,2023,84000.0
+Other African country,25-34,Bachelor's degree,7.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Mobile developer,0,2023,18000.0
+Other African country,25-34,Bachelor's degree,11.0,8.0,In-person,"500-4,999",Employed,Other tech role,0,2023,21102.0
+Other African country,25-34,Bachelor's degree,13.0,7.0,Hybrid,"500-4,999",Employed and freelancing,Back-end developer,0,2023,40516.0
+Kenya,25-34,Bachelor's degree,8.0,4.0,Hybrid,20-99,Employed,Full-stack developer,0,2023,8646.0
+Egypt,25-34,Bachelor's degree,11.0,8.0,Remote,"500-4,999",Employed and freelancing,Back-end developer,1,2023,120000.0
+Other African country,25-34,Master's degree,12.0,6.0,In-person,100-499,Employed,Full-stack developer,1,2023,19596.0
+Morocco,25-34,Bachelor's degree,10.0,11.0,Remote,100-499,Employed,Full-stack developer,1,2023,1774.0
+Other African country,25-34,"Some university, no degree",13.0,5.0,In-person,20-99,Employed,Other tech role,0,2023,9687.0
+Nigeria,18-24,Bachelor's degree,6.0,4.0,Remote,20-99,Employed,Full-stack developer,0,2023,58488.0
+Algeria,25-34,Master's degree,5.0,4.0,Remote,20-99,Employed,Data or AI,1,2023,732.0
+Kenya,25-34,Bachelor's degree,3.0,3.0,Hybrid,Under 20,Employed,Back-end developer,1,2023,16861.0
+Nigeria,25-34,Bachelor's degree,18.0,2.0,In-person,20-99,Employed,Other tech role,1,2023,695.0
+South Africa,18-24,Bachelor's degree,5.0,3.0,Remote,20-99,Employed,Full-stack developer,0,2023,22564.0
+Nigeria,25-34,Secondary or less,2.0,5.0,Hybrid,100-499,Employed,Other tech role,1,2023,1083.0
+Egypt,18-24,Bachelor's degree,12.0,9.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,5519.0
+Nigeria,25-34,Bachelor's degree,8.0,8.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,8665.0
+Ethiopia,25-34,"Some university, no degree",8.0,6.0,Hybrid,100-499,Employed,Full-stack developer,0,2023,40026.0
+Egypt,25-34,Bachelor's degree,11.0,7.0,Remote,20-99,Employed,Mobile developer,1,2023,1461.0
+Nigeria,18-24,"Some university, no degree",5.0,4.0,Hybrid,Under 20,Employed and freelancing,Back-end developer,0,2023,17330.0
+Tunisia,25-34,Master's degree,8.0,4.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2023,16381.0
+Ghana,25-34,Master's degree,6.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2023,666.0
+Egypt,25-34,Bachelor's degree,8.0,8.0,In-person,20-99,Employed,Back-end developer,1,2023,56815.0
+Other African country,18-24,"Some university, no degree",6.0,4.0,In-person,100-499,Employed,Full-stack developer,0,2023,8000.0
+Ethiopia,25-34,Bachelor's degree,9.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2023,2200.0
+Egypt,18-24,Bachelor's degree,4.0,3.0,Hybrid,20-99,Employed,Front-end developer,1,2023,5519.0
+Morocco,25-34,Master's degree,7.0,1.0,In-person,Under 20,Employed,Full-stack developer,0,2023,9854.0
+Other African country,25-34,Bachelor's degree,9.0,6.0,In-person,20-99,Employed,Full-stack developer,1,2023,19000.0
+Nigeria,18-24,Bachelor's degree,4.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2023,1300.0
+Morocco,25-34,Master's degree,11.0,5.0,In-person,100-499,Employed,Other tech role,1,2023,14781.0
+Ethiopia,25-34,Bachelor's degree,10.0,6.0,Remote,100-499,Employed and freelancing,Front-end developer,1,2023,24203.0
+Nigeria,25-34,Bachelor's degree,10.0,6.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,650.0
+South Africa,25-34,Bachelor's degree,3.0,3.0,Remote,Under 20,Employed,Other tech role,0,2023,21786.0
+South Africa,25-34,Bachelor's degree,7.0,4.0,Remote,"500-4,999",Employed,Full-stack developer,1,2023,55687.0
+South Africa,25-34,Master's degree,16.0,10.0,Hybrid,100-499,Employed,Other tech role,1,2023,67433.0
+Nigeria,25-34,Bachelor's degree,7.0,6.0,In-person,"500-4,999",Employed and freelancing,Other tech role,1,2023,19496.0
+Nigeria,18-24,"Some university, no degree",6.0,3.0,Hybrid,20-99,Employed,Mobile developer,1,2023,14080.0
+Egypt,25-34,Bachelor's degree,4.0,2.0,Remote,"5,000+",Employed,Full-stack developer,0,2023,30000.0
+Nigeria,18-24,Bachelor's degree,6.0,6.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,9358.0
+Ghana,25-34,Bachelor's degree,8.0,5.0,Remote,20-99,Employed,Mobile developer,1,2023,6389.0
+Other African country,25-34,Bachelor's degree,4.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,10085.0
+Egypt,25-34,Bachelor's degree,9.0,5.0,Remote,20-99,Employed,Front-end developer,1,2023,1948.0
+Kenya,25-34,Bachelor's degree,7.0,1.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2023,987.0
+Other African country,18-24,Bachelor's degree,4.0,1.0,Remote,Freelancer (just me),Employed and freelancing,Full-stack developer,1,2023,1169.0
+South Africa,25-34,Master's degree,12.0,3.0,In-person,20-99,Employed,Back-end developer,0,2023,31260.0
+South Africa,25-34,Bachelor's degree,16.0,10.0,Hybrid,"5,000+",Employed,Data or AI,1,2023,41186.0
+Egypt,25-34,"Some university, no degree",7.0,7.0,Hybrid,20-99,Employed,Mobile developer,1,2023,10551.0
+Other African country,25-34,Bachelor's degree,9.0,6.0,In-person,20-99,Employed,Full-stack developer,1,2023,14000.0
+Algeria,18-24,Master's degree,3.0,1.0,In-person,Under 20,Employed,Full-stack developer,0,2023,8782.0
+Other African country,25-34,Bachelor's degree,16.0,9.0,In-person,"500-4,999",Employed,Data or AI,1,2023,7942.0
+Nigeria,25-34,Bachelor's degree,11.0,7.0,Remote,20-99,Employed and freelancing,Full-stack developer,1,2023,15000.0
+Other African country,25-34,Bachelor's degree,11.0,9.0,Remote,100-499,Employed,Back-end developer,1,2023,47302.0
+Nigeria,25-34,Bachelor's degree,2.0,3.0,Remote,Under 20,Employed,Back-end developer,0,2023,5199.0
+Ghana,25-34,Bachelor's degree,16.0,8.0,Remote,"500-4,999",Employed,Mobile developer,1,2023,56000.0
+Morocco,25-34,"Some university, no degree",2.0,2.0,Hybrid,Under 20,Employed,Front-end developer,1,2023,6503.0
+Nigeria,25-34,Bachelor's degree,7.0,5.0,Remote,20-99,Employed,Full-stack developer,1,2023,40000.0
+Kenya,18-24,Bachelor's degree,6.0,5.0,In-person,20-99,Freelancer or self-employed,Other tech role,1,2023,800.0
+Ethiopia,25-34,Bachelor's degree,6.0,4.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,4401.0
+South Africa,25-34,"Some university, no degree",15.0,13.0,Remote,20-99,Employed,Back-end developer,0,2023,75732.0
+Ethiopia,25-34,Master's degree,10.0,10.0,Hybrid,100-499,Employed,Full-stack developer,1,2023,27504.0
+Egypt,18-24,Bachelor's degree,6.0,3.0,Remote,Under 20,Employed,Mobile developer,0,2023,53000.0
+South Africa,25-34,Bachelor's degree,8.0,4.0,In-person,20-99,Employed,Back-end developer,1,2023,17118.0
+South Africa,25-34,Master's degree,14.0,3.0,Remote,20-99,Employed,Data or AI,0,2023,31123.0
+Kenya,25-34,Bachelor's degree,5.0,5.0,In-person,100-499,Employed,Mobile developer,1,2023,7205.0
+Other African country,25-34,Master's degree,6.0,6.0,Hybrid,20-99,Employed,Full-stack developer,0,2023,5363.0
+Egypt,18-24,Bachelor's degree,4.0,1.0,Hybrid,"5,000+",Employed,Back-end developer,0,2023,3117.0
+South Africa,25-34,Master's degree,7.0,7.0,Remote,20-99,Employed,Other tech role,0,2023,62246.0
+Other African country,25-34,Secondary or less,8.0,12.0,Hybrid,20-99,Employed,Other tech role,1,2023,18198.0
+South Africa,25-34,"Some university, no degree",5.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,15561.0
+South Africa,25-34,"Some university, no degree",12.0,7.0,Remote,Under 20,Employed and freelancing,Back-end developer,1,2023,18674.0
+Other African country,25-34,"Some university, no degree",8.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,15000.0
+Kenya,25-34,"Some university, no degree",9.0,7.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2023,43232.0
+South Africa,25-34,Bachelor's degree,10.0,2.0,Hybrid,100-499,Employed,Mobile developer,1,2023,28011.0
+South Africa,25-34,Bachelor's degree,14.0,7.0,Remote,20-99,Employed,Full-stack developer,1,2023,37866.0
+South Africa,25-34,Master's degree,5.0,5.0,Remote,100-499,Employed,Other tech role,1,2023,38904.0
+South Africa,25-34,"Some university, no degree",17.0,15.0,Remote,Under 20,Employed,Full-stack developer,0,2023,40460.0
+South Africa,25-34,Bachelor's degree,12.0,10.0,Remote,Under 20,Employed,Mobile developer,1,2023,51872.0
+Nigeria,25-34,Bachelor's degree,5.0,3.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Back-end developer,1,2023,10398.0
+Other African country,25-34,Bachelor's degree,13.0,9.0,In-person,20-99,Employed,Full-stack developer,1,2023,15000.0
+Nigeria,25-34,"Some university, no degree",3.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2023,60000.0
+Other African country,18-24,Bachelor's degree,6.0,3.0,In-person,Under 20,Employed,Back-end developer,1,2023,7800.0
+Nigeria,25-34,"Some university, no degree",11.0,10.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,12997.0
+Nigeria,18-24,Bachelor's degree,7.0,4.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,17330.0
+Ethiopia,25-34,"Some university, no degree",3.0,3.0,Hybrid,100-499,Employed,Front-end developer,0,2023,3500.0
+Morocco,18-24,Secondary or less,8.0,4.0,In-person,Under 20,Employed,Back-end developer,1,2023,12307.0
+South Africa,25-34,"Some university, no degree",4.0,4.0,In-person,20-99,Employed,Full-stack developer,1,2023,13819.0
+Morocco,18-24,Master's degree,4.0,1.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,13598.0
+Algeria,25-34,Master's degree,8.0,4.0,In-person,Under 20,Employed and freelancing,Full-stack developer,0,2023,4391.0
+Morocco,25-34,Doctorate or professional degree,5.0,3.0,Remote,Under 20,Employed,Back-end developer,1,2023,5000.0
+Kenya,18-24,Bachelor's degree,6.0,3.0,Hybrid,"5,000+",Employed and freelancing,Other tech role,1,2023,28821.0
+Other African country,25-34,Bachelor's degree,11.0,7.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2023,1948.0
+South Africa,18-24,Bachelor's degree,8.0,1.0,Remote,"5,000+",Employed,Full-stack developer,1,2023,23342.0
+Egypt,18-24,Bachelor's degree,7.0,1.0,Remote,20-99,Employed,Full-stack developer,0,2023,5844.0
+Other African country,18-24,Bachelor's degree,6.0,5.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,44162.0
+Nigeria,25-34,Bachelor's degree,8.0,6.0,Remote,Under 20,Employed and freelancing,Front-end developer,1,2023,2500.0
+Kenya,25-34,Bachelor's degree,16.0,7.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2023,60000.0
+South Africa,25-34,"Some university, no degree",9.0,5.0,Remote,"500-4,999",Employed,Back-end developer,0,2023,62246.0
+South Africa,25-34,Bachelor's degree,6.0,4.0,Hybrid,20-99,Employed,Back-end developer,1,2023,2594.0
+Nigeria,25-34,Bachelor's degree,8.0,8.0,Hybrid,"5,000+",Employed and freelancing,Data or AI,1,2023,75818.0
+Kenya,18-24,"Some university, no degree",4.0,4.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2023,8646.0
+Tunisia,25-34,"Some university, no degree",4.0,1.0,In-person,Under 20,Employed,Full-stack developer,0,2023,9636.0
+Tunisia,25-34,Master's degree,8.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,5781.0
+Other African country,18-24,"Some university, no degree",3.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,980.0
+South Africa,18-24,Bachelor's degree,4.0,0.5,Hybrid,20-99,Employed,Front-end developer,0,2023,11827.0
+Other African country,25-34,"Some university, no degree",7.0,3.0,In-person,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,605.0
+Other African country,25-34,Bachelor's degree,2.0,4.0,In-person,20-99,Employed,Full-stack developer,1,2023,16196.0
+Ghana,25-34,Secondary or less,8.0,4.0,Remote,20-99,Employed,Full-stack developer,1,2023,3600.0
+Nigeria,18-24,Bachelor's degree,7.0,4.0,Hybrid,20-99,Employed,Front-end developer,1,2023,25995.0
+South Africa,25-34,"Some university, no degree",13.0,7.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2023,25936.0
+South Africa,25-34,Bachelor's degree,12.0,4.0,In-person,"500-4,999",Employed,Full-stack developer,0,2023,17636.0
+Kenya,25-34,Bachelor's degree,6.0,4.0,In-person,"500-4,999",Employed,Full-stack developer,1,2023,9367.0
+Other African country,25-34,Master's degree,6.0,2.0,In-person,"500-4,999",Employed,Data or AI,0,2023,2400.0
+Other African country,25-34,Bachelor's degree,2.0,2.0,In-person,20-99,Employed,Full-stack developer,1,2023,8045.0
+South Africa,25-34,Associate degree,12.0,12.0,Hybrid,100-499,Employed,Other tech role,1,2023,55993.0
+Ghana,25-34,Bachelor's degree,8.0,5.0,Remote,20-99,Employed,Mobile developer,1,2023,25000.0
+Tunisia,18-24,Bachelor's degree,6.0,3.0,Remote,Under 20,Employed,Other tech role,1,2023,12848.0
+Nigeria,18-24,Bachelor's degree,3.0,2.0,Remote,Under 20,Employed,Front-end developer,1,2023,20000.0
+Kenya,25-34,"Some university, no degree",13.0,7.0,Remote,20-99,Employed,Full-stack developer,1,2023,30000.0
+South Africa,25-34,Bachelor's degree,15.0,10.0,Remote,"500-4,999",Employed,Full-stack developer,0,2023,64839.0
+Nigeria,25-34,Bachelor's degree,3.0,1.0,In-person,Under 20,Employed,Back-end developer,0,2023,1300.0
+Nigeria,25-34,"Some university, no degree",3.0,1.0,Remote,Under 20,Employed,Front-end developer,0,2023,1083.0
+Algeria,25-34,Master's degree,6.0,4.0,Remote,Under 20,Employed,Full-stack developer,0,2023,3952.0
+South Africa,25-34,"Some university, no degree",15.0,10.0,Remote,"500-4,999",Employed,Other tech role,0,2023,103743.0
+Ghana,25-34,Bachelor's degree,14.0,8.0,Hybrid,100-499,Employed,Back-end developer,0,2023,70679.0
+Egypt,25-34,Bachelor's degree,8.0,4.0,In-person,20-99,Employed,Full-stack developer,1,2023,7792.0
+Other African country,25-34,Master's degree,6.0,9.0,Hybrid,Under 20,Freelancer or self-employed,Other tech role,0,2023,14000.0
+Tunisia,25-34,Bachelor's degree,5.0,2.0,Hybrid,20-99,Employed,Other tech role,1,2023,6424.0
+Egypt,25-34,Master's degree,12.0,4.0,Hybrid,20-99,Employed,Back-end developer,0,2023,46751.0
+Algeria,25-34,Master's degree,10.0,6.0,Hybrid,Under 20,Employed,Back-end developer,0,2023,12075.0
+South Africa,18-24,Bachelor's degree,8.0,2.0,In-person,20-99,Employed,Other tech role,0,2023,24898.0
+Other African country,25-34,Bachelor's degree,5.0,3.0,In-person,Under 20,Employed,Front-end developer,1,2023,12661.0
+South Africa,25-34,Bachelor's degree,13.0,10.0,Hybrid,20-99,Employed,Other tech role,1,2023,52909.0
+Other African country,25-34,Associate degree,14.0,11.0,Remote,Under 20,Employed,Full-stack developer,1,2023,46043.0
+South Africa,18-24,Bachelor's degree,8.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,12138.0
+South Africa,25-34,Bachelor's degree,18.0,10.0,Hybrid,20-99,Employed,Other tech role,0,2023,37348.0
+South Africa,25-34,"Some university, no degree",5.0,4.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,15561.0
+Egypt,25-34,Bachelor's degree,4.0,2.0,Hybrid,"500-4,999",Employed,Other tech role,1,2023,7013.0
+South Africa,25-34,Bachelor's degree,15.0,11.0,Remote,20-99,Employed,Full-stack developer,0,2023,72620.0
+Algeria,25-34,Master's degree,9.0,3.0,Remote,Under 20,Employed,Full-stack developer,1,2023,12851.0
+Kenya,25-34,Bachelor's degree,4.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,8646.0
+Other African country,25-34,Bachelor's degree,8.0,8.0,In-person,Under 20,Employed,Full-stack developer,0,2023,2500.0
+Morocco,25-34,Master's degree,7.0,4.0,Remote,20-99,Employed,Full-stack developer,0,2023,13303.0
+South Africa,18-24,Secondary or less,6.0,3.0,Remote,Under 20,Employed,Full-stack developer,1,2023,15561.0
+South Africa,25-34,"Some university, no degree",14.0,7.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,27181.0
+Tunisia,25-34,Master's degree,13.0,6.0,In-person,Under 20,Employed,Back-end developer,0,2023,6424.0
+Other African country,25-34,"Some university, no degree",1.0,1.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,2914.0
+Nigeria,18-24,Bachelor's degree,6.0,2.0,Hybrid,Under 20,Employed,Back-end developer,0,2023,1820.0
+Kenya,18-24,Bachelor's degree,4.0,3.0,In-person,20-99,Employed,Full-stack developer,1,2023,2882.0
+Nigeria,18-24,Bachelor's degree,6.0,1.0,Remote,20-99,Freelancer or self-employed,Mobile developer,0,2023,1430.0
+South Africa,25-34,Bachelor's degree,10.0,6.0,Hybrid,"500-4,999",Employed,Other tech role,1,2023,49797.0
+Nigeria,25-34,Bachelor's degree,6.0,6.0,Hybrid,Under 20,Employed and freelancing,Back-end developer,1,2023,10831.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2023,4572.0
+Egypt,25-34,Bachelor's degree,8.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,9740.0
+Morocco,18-24,Bachelor's degree,2.0,2.0,Hybrid,Under 20,Employed,Front-end developer,1,2023,3547.0
+South Africa,18-24,"Some university, no degree",7.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2023,15561.0
+Other African country,25-34,Bachelor's degree,6.0,3.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,0,2023,4238.0
+Other African country,18-24,Bachelor's degree,4.0,2.0,Remote,Under 20,Employed and freelancing,Front-end developer,1,2023,5363.0
+Other African country,18-24,Bachelor's degree,7.0,3.0,Remote,20-99,Employed and freelancing,Full-stack developer,0,2023,6359.0
+South Africa,25-34,Bachelor's degree,18.0,11.0,Remote,Under 20,Freelancer or self-employed,Other tech role,0,2023,62246.0
+Morocco,25-34,Master's degree,7.0,4.0,Remote,20-99,Employed,Front-end developer,1,2023,12416.0
+Ethiopia,18-24,Bachelor's degree,4.0,2.0,In-person,Under 20,Employed,Full-stack developer,0,2023,733.0
+Nigeria,18-24,Secondary or less,2.0,0.5,Remote,Under 20,Freelancer or self-employed,Front-end developer,1,2023,9748.0
+Other African country,18-24,"Some university, no degree",7.0,0.5,Remote,100-499,Employed,Back-end developer,1,2023,15000.0
+South Africa,25-34,Bachelor's degree,17.0,8.0,Hybrid,"500-4,999",Employed,Mobile developer,1,2023,43572.0
+South Africa,25-34,Secondary or less,10.0,10.0,In-person,20-99,Employed,Full-stack developer,0,2023,16184.0
+Nigeria,18-24,Bachelor's degree,5.0,1.0,Remote,20-99,Employed,Other tech role,0,2023,37432.0
+Ethiopia,18-24,Bachelor's degree,5.0,2.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,0,2023,16000.0
+Kenya,25-34,Bachelor's degree,5.0,5.0,In-person,Under 20,Employed,Full-stack developer,1,2023,25000.0
+Nigeria,18-24,Secondary or less,2.0,1.0,Remote,20-99,Employed,Front-end developer,1,2023,780.0
+Ghana,18-24,Secondary or less,3.0,2.0,Remote,Under 20,Employed and freelancing,Front-end developer,1,2023,1757.0
+Egypt,25-34,Bachelor's degree,8.0,4.0,Remote,100-499,Employed,Full-stack developer,0,2023,25973.0
+Kenya,25-34,Bachelor's degree,6.0,4.0,Hybrid,Freelancer (just me),Employed,Back-end developer,1,2023,5044.0
+South Africa,25-34,"Some university, no degree",9.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,31123.0
+South Africa,25-34,Bachelor's degree,4.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,1,2023,23031.0
+Nigeria,25-34,Bachelor's degree,3.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2023,780.0
+Nigeria,25-34,Bachelor's degree,2.0,2.0,In-person,100-499,Employed and freelancing,Full-stack developer,1,2023,11048.0
+South Africa,25-34,Bachelor's degree,15.0,4.0,Remote,Under 20,Employed,Full-stack developer,0,2023,43831.0
+Other African country,18-24,Bachelor's degree,10.0,4.0,Remote,Under 20,Employed,Full-stack developer,0,2023,41122.0
+Other African country,25-34,Master's degree,7.0,1.0,Hybrid,20-99,Employed,Data or AI,0,2023,66130.0
+Egypt,25-34,Bachelor's degree,15.0,8.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,32466.0
+Kenya,18-24,Secondary or less,10.0,10.0,Remote,20-99,Freelancer or self-employed,Data or AI,0,2023,56000.0
+South Africa,18-24,"Some university, no degree",2.0,1.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2023,17273.0
+Egypt,25-34,Bachelor's degree,3.0,1.0,In-person,Under 20,Employed,Front-end developer,1,2023,2727.0
+South Africa,18-24,Bachelor's degree,6.0,1.0,Hybrid,"5,000+",Employed,Data or AI,1,2023,16599.0
+South Africa,18-24,Bachelor's degree,12.0,4.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,31642.0
+South Africa,25-34,Bachelor's degree,19.0,10.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,15561.0
+Ethiopia,25-34,Bachelor's degree,5.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,0,2023,2750.0
+Morocco,25-34,Master's degree,6.0,2.0,Hybrid,Under 20,Employed,Back-end developer,1,2023,17145.0
+Other African country,25-34,Bachelor's degree,7.0,5.0,Hybrid,100-499,Employed,Other tech role,1,2023,10000.0
+Other African country,18-24,Bachelor's degree,4.0,1.0,Hybrid,"5,000+",Employed,Front-end developer,1,2023,9143.0
+Nigeria,18-24,Secondary or less,7.0,3.0,Remote,Under 20,Freelancer or self-employed,Back-end developer,0,2023,1300.0
+Nigeria,25-34,Bachelor's degree,4.0,2.0,Remote,Under 20,Freelancer or self-employed,Front-end developer,1,2023,43324.0
+Nigeria,25-34,Bachelor's degree,5.0,2.0,Remote,Under 20,Employed and freelancing,Back-end developer,0,2023,4679.0
+Other African country,25-34,Bachelor's degree,7.0,3.0,Remote,Under 20,Employed,Full-stack developer,0,2023,9654.0
+South Africa,25-34,"Some university, no degree",13.0,13.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,46684.0
+South Africa,25-34,Associate degree,7.0,1.0,Hybrid,Under 20,Employed,Front-end developer,0,2023,12449.0
+Egypt,18-24,Bachelor's degree,4.0,1.0,Hybrid,"5,000+",Employed,Other tech role,1,2023,18181.0
+South Africa,25-34,Master's degree,8.0,1.0,Remote,20-99,Employed,Full-stack developer,1,2023,24898.0
+South Africa,18-24,Bachelor's degree,7.0,1.0,Hybrid,Under 20,Employed,Other tech role,1,2023,18674.0
+Egypt,25-34,"Some university, no degree",17.0,10.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2023,42270.0
+Ghana,25-34,Bachelor's degree,7.0,4.0,Remote,20-99,Employed and freelancing,Full-stack developer,1,2023,20872.0
+Egypt,25-34,Bachelor's degree,10.0,5.0,Remote,Under 20,Employed,Back-end developer,1,2023,903.0
+South Africa,25-34,Secondary or less,8.0,5.0,Remote,Under 20,Employed,Full-stack developer,1,2023,37348.0
+Algeria,25-34,Master's degree,13.0,8.0,Remote,20-99,Employed,Back-end developer,1,2023,1317.0
+Egypt,18-24,Bachelor's degree,5.0,1.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,6168.0
+Algeria,25-34,Master's degree,6.0,3.0,In-person,100-499,Employed,Full-stack developer,0,2023,8782.0
+Nigeria,18-24,Bachelor's degree,7.0,2.0,Remote,Under 20,Employed,Data or AI,0,2023,45000.0
+Nigeria,18-24,"Some university, no degree",2.0,1.0,Remote,20-99,Employed,Front-end developer,1,2023,2400.0
+Ghana,25-34,Bachelor's degree,6.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Back-end developer,1,2023,4259.0
+Kenya,18-24,"Some university, no degree",5.0,3.0,Remote,100-499,Freelancer or self-employed,Front-end developer,1,2023,14411.0
+Other African country,25-34,Bachelor's degree,8.0,7.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,2110.0
+South Africa,25-34,Bachelor's degree,5.0,2.0,Hybrid,"5,000+",Employed,Data or AI,1,2023,24380.0
+Ethiopia,25-34,Bachelor's degree,9.0,7.0,Remote,20-99,Employed,Full-stack developer,0,2023,96000.0
+Algeria,25-34,Doctorate or professional degree,8.0,7.0,Remote,Under 20,Freelancer or self-employed,Data or AI,1,2023,13173.0
+South Africa,25-34,Bachelor's degree,6.0,4.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2023,33717.0
+South Africa,25-34,Bachelor's degree,10.0,3.0,Remote,20-99,Employed,Full-stack developer,1,2023,32990.0
+South Africa,25-34,Bachelor's degree,13.0,16.0,Remote,Under 20,Employed,Other tech role,1,2023,33717.0
+Other African country,25-34,Master's degree,15.0,11.0,Hybrid,"500-4,999",Employed and freelancing,Data or AI,1,2023,2034.0
+Kenya,25-34,Bachelor's degree,7.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2023,3545.0
+South Africa,25-34,Associate degree,15.0,13.0,In-person,Under 20,Employed,Full-stack developer,1,2023,33613.0
+South Africa,25-34,Bachelor's degree,12.0,6.0,Hybrid,"500-4,999",Employed,Other tech role,0,2023,41497.0
+Tunisia,18-24,Secondary or less,4.0,3.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2023,38543.0
+Other African country,18-24,Secondary or less,6.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2023,6436.0
+Kenya,18-24,Bachelor's degree,1.0,2.0,In-person,Under 20,Employed,Front-end developer,1,2023,4756.0
+Nigeria,25-34,Bachelor's degree,9.0,4.0,Remote,20-99,Employed,Back-end developer,0,2023,39600.0
+South Africa,25-34,"Some university, no degree",7.0,5.0,Remote,"5,000+",Employed,Other tech role,1,2023,25936.0
+South Africa,25-34,Bachelor's degree,9.0,5.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2023,26143.0
+South Africa,25-34,Bachelor's degree,6.0,8.0,Hybrid,"5,000+",Employed,Other tech role,0,2023,103743.0
+South Africa,25-34,Bachelor's degree,14.0,10.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2023,39215.0
+South Africa,18-24,Bachelor's degree,6.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,18155.0
+Algeria,18-24,Master's degree,6.0,2.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2023,9148.0
+South Africa,18-24,Bachelor's degree,3.0,1.0,Hybrid,"5,000+",Employed,Data or AI,1,2023,20852.0
+Other African country,18-24,"Some university, no degree",9.0,9.0,In-person,Under 20,Employed and freelancing,Front-end developer,1,2023,5065.0
+Kenya,25-34,"Some university, no degree",7.0,7.0,Hybrid,20-99,Employed and freelancing,Other tech role,0,2023,70000.0
+Nigeria,25-34,Bachelor's degree,7.0,7.0,Remote,100-499,Freelancer or self-employed,Back-end developer,1,2023,48000.0
+South Africa,25-34,Bachelor's degree,15.0,9.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2023,70027.0
+Kenya,25-34,Bachelor's degree,8.0,8.0,Hybrid,Under 20,Employed and freelancing,Back-end developer,1,2023,1801.0
+South Africa,25-34,"Some university, no degree",15.0,14.0,Remote,20-99,Employed and freelancing,Full-stack developer,0,2023,124492.0
+South Africa,25-34,Bachelor's degree,9.0,5.0,Remote,20-99,Employed,Full-stack developer,1,2023,62246.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,40000.0
+Nigeria,25-34,Secondary or less,6.0,5.0,Remote,Under 20,Employed,Full-stack developer,1,2023,10398.0
+Other African country,25-34,"Some university, no degree",7.0,7.0,Hybrid,100-499,Employed,Full-stack developer,0,2023,6077.0
+Other African country,25-34,Master's degree,10.0,6.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,120000.0
+Morocco,18-24,Master's degree,5.0,0.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2023,14781.0
+South Africa,18-24,Secondary or less,8.0,10.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2023,31123.0
+Egypt,25-34,Bachelor's degree,3.0,6.0,In-person,"500-4,999",Employed,Other tech role,1,2023,7142.0
+Other African country,25-34,Associate degree,8.0,5.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,620.0
+Egypt,25-34,"Some university, no degree",8.0,3.0,Hybrid,20-99,Employed,Back-end developer,0,2023,844.0
+Other African country,25-34,Bachelor's degree,7.0,6.0,In-person,Under 20,Employed,Full-stack developer,0,2023,6331.0
+Other African country,25-34,Secondary or less,11.0,7.0,In-person,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2023,8818.0
+Egypt,25-34,Bachelor's degree,4.0,4.0,Hybrid,20-99,Employed,Full-stack developer,1,2023,4221.0
+Nigeria,18-24,"Some university, no degree",4.0,4.0,In-person,Under 20,Employed,Full-stack developer,0,2023,6499.0
+Morocco,25-34,Bachelor's degree,12.0,10.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2023,29561.0
+South Africa,25-34,Master's degree,10.0,6.0,Remote,Under 20,Employed,Other tech role,1,2023,28011.0
+South Africa,25-34,"Some university, no degree",11.0,11.0,Remote,100-499,Employed and freelancing,Full-stack developer,0,2024,64570.0
+Morocco,18-24,Master's degree,5.0,0.0,In-person,20-99,Employed,Full-stack developer,1,2024,3618.0
+South Africa,25-34,"Some university, no degree",10.0,10.0,Remote,100-499,Employed and freelancing,Full-stack developer,0,2024,64570.0
+South Africa,25-34,Secondary or less,7.0,6.0,Remote,100-499,Employed,Full-stack developer,0,2024,4843.0
+Algeria,18-24,Master's degree,7.0,1.0,Hybrid,20-99,Employed,Back-end developer,0,2024,8010.0
+Other African country,25-34,Bachelor's degree,7.0,3.0,Remote,Under 20,Employed and freelancing,Front-end developer,1,2024,7200.0
+Morocco,18-24,Secondary or less,4.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2024,3618.0
+Egypt,18-24,Associate degree,3.0,1.0,Remote,20-99,Employed,Front-end developer,0,2024,5000.0
+Egypt,18-24,Bachelor's degree,7.0,2.0,Remote,20-99,Employed,Other tech role,0,2024,38666.0
+Other African country,25-34,Bachelor's degree,11.0,7.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Back-end developer,1,2024,6367.0
+Egypt,25-34,Bachelor's degree,15.0,10.0,Remote,Under 20,Employed,Back-end developer,1,2024,9600.0
+Kenya,25-34,Bachelor's degree,8.0,5.0,Remote,100-499,Employed,Full-stack developer,0,2024,38140.0
+Ghana,25-34,Bachelor's degree,4.0,4.0,Remote,Under 20,Freelancer or self-employed,Mobile developer,1,2024,1333.0
+Nigeria,18-24,"Some university, no degree",7.0,4.0,Remote,Under 20,Employed and freelancing,Mobile developer,1,2024,3987.0
+Algeria,25-34,Bachelor's degree,7.0,3.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2024,6230.0
+Kenya,18-24,Bachelor's degree,5.0,5.0,Remote,20-99,Employed,Full-stack developer,0,2024,5581.0
+Other African country,25-34,"Some university, no degree",5.0,2.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2024,27000.0
+Egypt,25-34,Bachelor's degree,10.0,4.0,Remote,Under 20,Employed,Back-end developer,1,2024,20000.0
+Kenya,18-24,Bachelor's degree,8.0,4.0,In-person,20-99,Employed,Data or AI,1,2024,7256.0
+Egypt,25-34,Bachelor's degree,9.0,4.0,In-person,"5,000+",Employed,Other tech role,0,2024,10935.0
+Nigeria,25-34,Bachelor's degree,6.0,6.0,Remote,20-99,Employed,Full-stack developer,1,2024,18000.0
+South Africa,25-34,Bachelor's degree,10.0,6.0,In-person,20-99,Employed,Full-stack developer,0,2024,19586.0
+Egypt,25-34,Bachelor's degree,12.0,8.0,In-person,"500-4,999",Employed,Other tech role,1,2024,21198.0
+South Africa,25-34,Bachelor's degree,11.0,4.0,Hybrid,100-499,Employed,Full-stack developer,0,2024,20447.0
+Other African country,18-24,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed,Other tech role,1,2024,2617.0
+Other African country,25-34,Bachelor's degree,15.0,5.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2024,12000.0
+South Africa,25-34,"Some university, no degree",9.0,9.0,In-person,20-99,Employed and freelancing,Other tech role,1,2024,23704.0
+Other African country,25-34,Bachelor's degree,8.0,8.0,Hybrid,100-499,Employed,Full-stack developer,1,2024,33907.0
+Egypt,25-34,"Some university, no degree",1.0,1.0,Remote,Under 20,Employed,Front-end developer,1,2024,4206.0
+Nigeria,18-24,Bachelor's degree,3.0,0.5,In-person,20-99,Employed,Other tech role,1,2024,797.0
+Nigeria,25-34,Bachelor's degree,10.0,9.0,Remote,"5,000+",Freelancer or self-employed,Mobile developer,1,2024,60000.0
+South Africa,25-34,Bachelor's degree,6.0,4.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,34975.0
+South Africa,25-34,Bachelor's degree,7.0,3.0,Hybrid,"5,000+",Freelancer or self-employed,Data or AI,1,2024,37128.0
+South Africa,25-34,Bachelor's degree,10.0,11.0,Remote,100-499,Employed,Full-stack developer,1,2024,83941.0
+Egypt,25-34,"Some university, no degree",4.0,4.0,Remote,100-499,Freelancer or self-employed,Front-end developer,1,2024,30000.0
+South Africa,25-34,"Some university, no degree",20.0,10.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,24537.0
+Egypt,25-34,Bachelor's degree,8.0,3.0,Hybrid,100-499,Employed,Data or AI,1,2024,5749.0
+Other African country,25-34,Bachelor's degree,11.0,6.0,Remote,20-99,Employed,Full-stack developer,1,2024,40000.0
+Morocco,25-34,Secondary or less,11.0,4.0,In-person,20-99,Employed,Back-end developer,1,2024,22913.0
+South Africa,18-24,Bachelor's degree,9.0,2.0,In-person,"500-4,999",Employed,Full-stack developer,1,2024,1076.0
+Other African country,18-24,Doctorate or professional degree,6.0,4.0,Remote,Under 20,Freelancer or self-employed,Mobile developer,1,2024,15000.0
+South Africa,25-34,Associate degree,18.0,12.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2024,38742.0
+Nigeria,25-34,Bachelor's degree,5.0,3.0,Remote,Under 20,Employed and freelancing,Back-end developer,0,2024,2551.0
+Nigeria,25-34,Bachelor's degree,5.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,0,2024,5000.0
+Other African country,25-34,"Some university, no degree",4.0,4.0,Hybrid,Freelancer (just me),Employed and freelancing,Full-stack developer,1,2024,2280.0
+Egypt,25-34,Master's degree,11.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,32222.0
+Algeria,25-34,"Some university, no degree",8.0,4.0,Remote,Under 20,Freelancer or self-employed,Other tech role,1,2024,47259.0
+Ethiopia,25-34,Bachelor's degree,4.0,3.0,Remote,Under 20,Employed and freelancing,Back-end developer,1,2024,8707.0
+South Africa,25-34,Bachelor's degree,5.0,5.0,In-person,20-99,Employed,Other tech role,0,2024,26904.0
+Tunisia,25-34,Master's degree,6.0,4.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,7994.0
+Ghana,25-34,"Some university, no degree",8.0,6.0,Hybrid,"500-4,999",Employed,Front-end developer,0,2024,21523.0
+Nigeria,25-34,Bachelor's degree,8.0,5.0,Remote,"500-4,999",Employed,Full-stack developer,1,2024,10166.0
+Kenya,18-24,Bachelor's degree,5.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,775.0
+South Africa,25-34,"Some university, no degree",12.0,10.0,Remote,100-499,Employed,Front-end developer,1,2024,4116.0
+South Africa,18-24,Bachelor's degree,6.0,1.0,In-person,100-499,Employed,Mobile developer,0,2024,10331.0
+South Africa,25-34,"Some university, no degree",11.0,11.0,Remote,20-99,Employed,Back-end developer,0,2024,30994.0
+South Africa,25-34,Bachelor's degree,11.0,1.0,Remote,Under 20,Employed,Full-stack developer,0,2024,11892.0
+Kenya,18-24,Secondary or less,5.0,1.0,In-person,Under 20,Employed,Front-end developer,1,2024,3070.0
+South Africa,25-34,Secondary or less,7.0,7.0,Remote,100-499,Employed,Full-stack developer,0,2024,6457.0
+Egypt,18-24,Bachelor's degree,10.0,7.0,Hybrid,100-499,Employed,Full-stack developer,1,2024,9842.0
+Egypt,25-34,Bachelor's degree,9.0,4.0,Hybrid,20-99,Employed,Back-end developer,1,2024,16824.0
+South Africa,25-34,Doctorate or professional degree,14.0,2.0,In-person,20-99,Employed,Other tech role,0,2024,45737.0
+Nigeria,18-24,Bachelor's degree,11.0,5.0,Remote,100-499,Employed,Back-end developer,1,2024,24000.0
+Tunisia,25-34,Master's degree,10.0,8.0,Hybrid,"500-4,999",Employed and freelancing,Other tech role,0,2024,33333.0
+South Africa,25-34,"Some university, no degree",6.0,4.0,In-person,Under 20,Employed,Back-end developer,1,2024,1345.0
+Nigeria,25-34,Bachelor's degree,12.0,7.0,Remote,Under 20,Employed and freelancing,Full-stack developer,0,2024,22000.0
+Kenya,25-34,Bachelor's degree,11.0,9.0,In-person,100-499,Employed,Other tech role,0,2024,659.0
+South Africa,25-34,"Some university, no degree",5.0,16.0,Hybrid,Under 20,Employed and freelancing,Other tech role,1,2024,99546.0
+Nigeria,25-34,"Some university, no degree",9.0,4.0,Remote,Under 20,Employed,Front-end developer,1,2024,15600.0
+Ethiopia,18-24,Bachelor's degree,6.0,0.5,Remote,Under 20,Employed,Full-stack developer,1,2024,12000.0
+Ghana,25-34,Bachelor's degree,6.0,3.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2024,31999.0
+Other African country,25-34,Bachelor's degree,10.0,7.0,Remote,Under 20,Employed,Full-stack developer,0,2024,18665.0
+Egypt,18-24,"Some university, no degree",10.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,9600.0
+Morocco,18-24,"Some university, no degree",6.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2024,9648.0
+Egypt,25-34,Bachelor's degree,6.0,5.0,Hybrid,Under 20,Employed,Back-end developer,1,2024,2524.0
+Nigeria,25-34,Bachelor's degree,9.0,6.0,Remote,Under 20,Employed,Other tech role,0,2024,1196.0
+Other African country,18-24,Bachelor's degree,5.0,4.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,25777.0
+Morocco,18-24,Master's degree,6.0,2.0,In-person,"500-4,999",Employed,Full-stack developer,1,2024,18492.0
+Nigeria,18-24,Bachelor's degree,6.0,4.0,Remote,"500-4,999",Employed,Mobile developer,1,2024,6586.0
+Other African country,25-34,Bachelor's degree,19.0,12.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2024,2339.0
+Ethiopia,25-34,Bachelor's degree,8.0,3.0,Remote,Under 20,Employed,Back-end developer,1,2024,3135.0
+Nigeria,25-34,Bachelor's degree,7.0,4.0,Remote,20-99,Employed,Other tech role,1,2024,10880.0
+Kenya,18-24,Bachelor's degree,8.0,4.0,Hybrid,Under 20,Employed,Front-end developer,0,2024,11163.0
+Other African country,25-34,Master's degree,14.0,5.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2024,7852.0
+Other African country,18-24,Bachelor's degree,5.0,5.0,In-person,20-99,Employed,Mobile developer,0,2024,5694.0
+South Africa,25-34,"Some university, no degree",8.0,7.0,In-person,Under 20,Employed,Full-stack developer,0,2024,13452.0
+Egypt,25-34,Bachelor's degree,18.0,10.0,Remote,Under 20,Employed,Full-stack developer,1,2024,39745.0
+Kenya,25-34,"Some university, no degree",6.0,6.0,Hybrid,20-99,Employed,Back-end developer,0,2024,6140.0
+Egypt,18-24,Bachelor's degree,5.0,1.0,Remote,20-99,Employed,Full-stack developer,1,2024,8700.0
+Tunisia,25-34,Master's degree,7.0,2.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2024,3837.0
+Morocco,25-34,Master's degree,12.0,6.0,Hybrid,Under 20,Employed and freelancing,Other tech role,1,2024,34169.0
+Morocco,18-24,"Some university, no degree",3.0,1.0,Remote,"5,000+",Employed,Full-stack developer,1,2024,1206.0
+Ghana,25-34,Bachelor's degree,9.0,6.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,867.0
+Other African country,25-34,Bachelor's degree,7.0,5.0,In-person,"5,000+",Employed and freelancing,Full-stack developer,1,2024,11472.0
+Egypt,25-34,Master's degree,6.0,5.0,Hybrid,"500-4,999",Employed,Other tech role,1,2024,16592.0
+Ghana,25-34,Bachelor's degree,7.0,7.0,Remote,20-99,Employed,Mobile developer,1,2024,8000.0
+Ghana,25-34,Bachelor's degree,1.0,0.0,Remote,20-99,Employed,Other tech role,1,2024,2400.0
+Kenya,18-24,Bachelor's degree,7.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2024,1550.0
+South Africa,25-34,Bachelor's degree,13.0,10.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2024,61557.0
+Other African country,18-24,Bachelor's degree,5.0,1.0,In-person,Under 20,Employed,Full-stack developer,0,2024,5906.0
+Other African country,18-24,Secondary or less,5.0,5.0,Hybrid,20-99,Employed,Back-end developer,1,2024,7500.0
+South Africa,25-34,Bachelor's degree,10.0,6.0,Hybrid,100-499,Employed and freelancing,Other tech role,0,2024,38742.0
+South Africa,25-34,Master's degree,6.0,6.0,Remote,20-99,Employed,Full-stack developer,1,2024,67530.0
+South Africa,25-34,Master's degree,12.0,5.0,In-person,20-99,Employed,Other tech role,0,2024,32285.0
+Other African country,25-34,Bachelor's degree,7.0,5.0,In-person,100-499,Employed,Full-stack developer,1,2024,11264.0
+Other African country,25-34,Bachelor's degree,10.0,6.0,In-person,100-499,Employed,Full-stack developer,1,2024,6449.0
+Other African country,18-24,Associate degree,3.0,3.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2024,818.0
+Algeria,25-34,Master's degree,8.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,2967.0
+Ghana,25-34,Bachelor's degree,4.0,3.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2024,4800.0
+Nigeria,18-24,Bachelor's degree,5.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2024,3508.0
+Egypt,25-34,Bachelor's degree,10.0,5.0,Remote,Under 20,Employed and freelancing,Mobile developer,1,2024,4206.0
+Other African country,25-34,Bachelor's degree,7.0,3.0,In-person,20-99,Employed,Full-stack developer,0,2024,6264.0
+Nigeria,25-34,Bachelor's degree,12.0,6.0,Hybrid,100-499,Employed,Back-end developer,1,2024,11960.0
+Nigeria,25-34,Bachelor's degree,4.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,2658.0
+Nigeria,25-34,Bachelor's degree,9.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,25000.0
+Egypt,25-34,Bachelor's degree,9.0,3.0,Remote,"500-4,999",Employed,Back-end developer,1,2024,9135.0
+Tunisia,25-34,Master's degree,7.0,2.0,Hybrid,20-99,Employed,Back-end developer,1,2024,4988.0
+Ethiopia,25-34,Master's degree,8.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2024,2264.0
+Egypt,18-24,Bachelor's degree,3.0,2.0,Remote,Under 20,Employed,Front-end developer,0,2024,5552.0
+Egypt,25-34,Bachelor's degree,8.0,3.0,Hybrid,100-499,Employed,Back-end developer,0,2024,8580.0
+Egypt,25-34,Bachelor's degree,10.0,6.0,Remote,20-99,Employed,Full-stack developer,1,2024,52574.0
+Other African country,18-24,"Some university, no degree",10.0,4.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2024,7803.0
+Other African country,25-34,Bachelor's degree,9.0,7.0,Remote,Under 20,Freelancer or self-employed,Other tech role,0,2024,7000.0
+Morocco,18-24,Associate degree,6.0,2.0,In-person,20-99,Employed,Full-stack developer,1,2024,1105.0
+Nigeria,18-24,Secondary or less,4.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2024,22724.0
+Morocco,25-34,Master's degree,3.0,1.0,Hybrid,"5,000+",Employed,Other tech role,0,2024,15577.0
+Egypt,25-34,Bachelor's degree,10.0,5.0,Remote,20-99,Employed,Back-end developer,0,2024,36000.0
+South Africa,25-34,Bachelor's degree,12.0,4.0,Remote,20-99,Employed,Full-stack developer,1,2024,45845.0
+Egypt,18-24,"Some university, no degree",4.0,0.0,Remote,20-99,Employed,Front-end developer,1,2024,3785.0
+Egypt,18-24,Bachelor's degree,7.0,2.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,23132.0
+Nigeria,25-34,Secondary or less,11.0,6.0,Remote,20-99,Employed,Mobile developer,0,2024,731.0
+South Africa,25-34,"Some university, no degree",10.0,4.0,In-person,Under 20,Employed,Front-end developer,1,2024,11623.0
+South Africa,18-24,Secondary or less,7.0,2.0,Hybrid,100-499,Employed,Full-stack developer,1,2024,16143.0
+Other African country,25-34,Bachelor's degree,10.0,6.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,10000.0
+Algeria,25-34,Master's degree,4.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2024,4450.0
+South Africa,25-34,"Some university, no degree",15.0,8.0,Remote,"500-4,999",Employed,Back-end developer,0,2024,91474.0
+Kenya,25-34,Bachelor's degree,10.0,9.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,93023.0
+Tunisia,25-34,Bachelor's degree,6.0,2.0,Hybrid,100-499,Employed,Data or AI,1,2024,7994.0
+Kenya,18-24,Bachelor's degree,7.0,1.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,13954.0
+Other African country,25-34,Bachelor's degree,7.0,2.0,In-person,20-99,Employed,Full-stack developer,0,2024,8054.0
+Egypt,18-24,Bachelor's degree,6.0,1.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2024,6225.0
+South Africa,25-34,Bachelor's degree,16.0,6.0,Remote,Under 20,Employed and freelancing,Full-stack developer,0,2024,80713.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,46399.0
+Ethiopia,18-24,Bachelor's degree,6.0,3.0,In-person,Under 20,Employed,Front-end developer,1,2024,3135.0
+Other African country,18-24,Bachelor's degree,9.0,4.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,2269.0
+South Africa,18-24,"Some university, no degree",5.0,3.0,Hybrid,"5,000+",Employed,Back-end developer,1,2024,18833.0
+Other African country,25-34,Bachelor's degree,7.0,4.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2024,8658.0
+Other African country,25-34,Bachelor's degree,8.0,3.0,In-person,20-99,Employed and freelancing,Full-stack developer,1,2024,9897.0
+Tunisia,25-34,Doctorate or professional degree,15.0,5.0,Hybrid,20-99,Employed,Other tech role,1,2024,12278.0
+Nigeria,18-24,Bachelor's degree,4.0,3.0,Remote,Under 20,Employed,Mobile developer,1,2024,1329.0
+Kenya,25-34,Bachelor's degree,6.0,6.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,775.0
+South Africa,18-24,Bachelor's degree,7.0,6.0,Remote,"500-4,999",Employed,Full-stack developer,1,2024,52463.0
+Other African country,25-34,Master's degree,6.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,17112.0
+South Africa,25-34,Bachelor's degree,14.0,13.0,Hybrid,"500-4,999",Employed,Mobile developer,0,2024,55530.0
+Nigeria,25-34,Bachelor's degree,10.0,5.0,Remote,20-99,Freelancer or self-employed,Front-end developer,1,2024,31229.0
+Other African country,25-34,Master's degree,11.0,8.0,In-person,100-499,Employed,Data or AI,1,2024,10080.0
+Ghana,18-24,Bachelor's degree,4.0,1.0,In-person,Under 20,Employed,Other tech role,0,2024,640.0
+Egypt,18-24,Bachelor's degree,9.0,9.0,Remote,Freelancer (just me),Freelancer or self-employed,Mobile developer,0,2024,36000.0
+Morocco,25-34,Bachelor's degree,3.0,1.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2024,600.0
+Egypt,25-34,Bachelor's degree,10.0,6.0,Hybrid,Under 20,Employed,Full-stack developer,0,2024,10515.0
+Nigeria,25-34,Bachelor's degree,4.0,1.0,Hybrid,"5,000+",Employed,Back-end developer,1,2024,4319.0
+Ethiopia,18-24,Bachelor's degree,4.0,1.0,In-person,20-99,Employed,Full-stack developer,1,2024,3343.0
+Kenya,18-24,Bachelor's degree,5.0,1.0,Hybrid,"5,000+",Employed and freelancing,Data or AI,1,2024,1860.0
+Nigeria,18-24,Secondary or less,3.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,1063.0
+Nigeria,25-34,Bachelor's degree,3.0,7.0,In-person,100-499,Employed,Front-end developer,1,2024,2791.0
+Algeria,25-34,Master's degree,8.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,5340.0
+Other African country,25-34,Master's degree,8.0,4.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2024,18000.0
+Kenya,25-34,Master's degree,14.0,14.0,In-person,"500-4,999",Employed,Other tech role,0,2024,100000.0
+Nigeria,25-34,Bachelor's degree,5.0,5.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2024,8638.0
+Nigeria,25-34,Bachelor's degree,5.0,2.0,Hybrid,"500-4,999",Employed and freelancing,Front-end developer,1,2024,7973.0
+South Africa,25-34,Associate degree,5.0,0.0,In-person,Under 20,Employed,Full-stack developer,0,2024,6296.0
+Algeria,18-24,Master's degree,6.0,1.0,Remote,Freelancer (just me),Freelancer or self-employed,Data or AI,1,2024,20000.0
+Ethiopia,25-34,Bachelor's degree,10.0,8.0,Hybrid,20-99,Employed,Back-end developer,1,2024,12538.0
+Other African country,25-34,Bachelor's degree,12.0,8.0,In-person,100-499,Employed,Full-stack developer,0,2024,19120.0
+Ghana,18-24,Bachelor's degree,6.0,2.0,Hybrid,"500-4,999",Employed,Mobile developer,1,2024,5949.0
+Ghana,25-34,"Some university, no degree",6.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2024,30000.0
+South Africa,25-34,Bachelor's degree,10.0,4.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2024,1991.0
+Egypt,25-34,Bachelor's degree,8.0,2.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,18000.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,In-person,"500-4,999",Employed,Full-stack developer,1,2024,22693.0
+Other African country,25-34,Bachelor's degree,12.0,12.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2024,45889.0
+South Africa,25-34,Bachelor's degree,20.0,13.0,Remote,100-499,Employed,Other tech role,0,2024,135866.0
+Kenya,18-24,Associate degree,6.0,2.0,Hybrid,20-99,Employed,Mobile developer,1,2024,9302.0
+Other African country,25-34,Bachelor's degree,10.0,7.0,Remote,Under 20,Employed,Other tech role,0,2024,44643.0
+Egypt,18-24,Secondary or less,3.0,2.0,Remote,20-99,Employed,Full-stack developer,1,2024,3659.0
+South Africa,18-24,Bachelor's degree,7.0,2.0,In-person,20-99,Employed,Full-stack developer,0,2024,23633.0
+South Africa,18-24,Bachelor's degree,10.0,2.0,Remote,Under 20,Freelancer or self-employed,Other tech role,0,2024,3767.0
+Ghana,25-34,Associate degree,6.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,12000.0
+Nigeria,25-34,Bachelor's degree,7.0,5.0,Remote,20-99,Employed and freelancing,Mobile developer,1,2024,7336.0
+Ghana,25-34,Bachelor's degree,13.0,10.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,667.0
+Other African country,25-34,Associate degree,15.0,5.0,In-person,100-499,Employed,Full-stack developer,1,2024,9160.0
+Nigeria,25-34,Bachelor's degree,6.0,8.0,Remote,"500-4,999",Employed,Back-end developer,1,2024,4385.0
+Other African country,18-24,"Some university, no degree",4.0,3.0,In-person,Under 20,Employed,Back-end developer,1,2024,34896.0
+South Africa,25-34,Master's degree,12.0,8.0,Remote,Under 20,Employed,Full-stack developer,0,2024,38742.0
+Nigeria,25-34,Bachelor's degree,5.0,4.0,Remote,Under 20,Employed,Front-end developer,1,2024,24000.0
+Other African country,25-34,Bachelor's degree,15.0,7.0,Remote,Under 20,Employed and freelancing,Mobile developer,1,2024,36179.0
+Tunisia,25-34,Master's degree,17.0,9.0,Hybrid,100-499,Employed,Other tech role,1,2024,61062.0
+South Africa,25-34,Bachelor's degree,7.0,7.0,Hybrid,100-499,Employed,Full-stack developer,0,2024,53808.0
+Ethiopia,25-34,"Some university, no degree",9.0,4.0,Hybrid,100-499,Employed,Full-stack developer,0,2024,54000.0
+Kenya,25-34,"Some university, no degree",6.0,5.0,Remote,Under 20,Employed,Full-stack developer,1,2024,60000.0
+Kenya,18-24,Bachelor's degree,6.0,1.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,0,2024,5581.0
+Other African country,25-34,Bachelor's degree,10.0,5.0,Hybrid,20-99,Employed and freelancing,Other tech role,1,2024,100000.0
+Kenya,18-24,Associate degree,5.0,3.0,Hybrid,Under 20,Employed and freelancing,Front-end developer,1,2024,4186.0
+Kenya,25-34,Bachelor's degree,6.0,4.0,Remote,"500-4,999",Employed,Back-end developer,0,2024,46512.0
+South Africa,25-34,Bachelor's degree,6.0,7.0,In-person,Freelancer (just me),Employed and freelancing,Other tech role,1,2024,19371.0
+Other African country,25-34,Master's degree,12.0,7.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,3356.0
+Nigeria,18-24,Master's degree,5.0,5.0,Remote,20-99,Freelancer or self-employed,Mobile developer,1,2024,2392.0
+Nigeria,25-34,Bachelor's degree,2.0,2.0,In-person,20-99,Employed,Mobile developer,1,2024,797.0
+Nigeria,25-34,Bachelor's degree,6.0,5.0,Hybrid,20-99,Employed and freelancing,Back-end developer,1,2024,930.0
+Morocco,25-34,Associate degree,7.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,20501.0
+Kenya,25-34,Bachelor's degree,13.0,10.0,Hybrid,Under 20,Employed,Back-end developer,1,2024,5814.0
+Kenya,25-34,"Some university, no degree",13.0,10.0,Hybrid,20-99,Employed,Back-end developer,1,2024,32558.0
+Nigeria,25-34,Bachelor's degree,7.0,2.0,Hybrid,Under 20,Employed,Other tech role,1,2024,2392.0
+South Africa,18-24,Bachelor's degree,5.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2024,17434.0
+Nigeria,25-34,Bachelor's degree,7.0,6.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2024,4651.0
+Kenya,18-24,Bachelor's degree,5.0,1.0,Hybrid,Under 20,Employed,Other tech role,0,2024,100000.0
+Kenya,25-34,"Some university, no degree",12.0,9.0,Remote,"5,000+",Employed,Full-stack developer,1,2024,73932.0
+Egypt,25-34,Bachelor's degree,1.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2024,1009.0
+Other African country,18-24,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed,Data or AI,1,2024,7648.0
+South Africa,25-34,Bachelor's degree,7.0,2.0,Hybrid,100-499,Employed,Back-end developer,1,2024,10762.0
+Nigeria,25-34,Master's degree,10.0,10.0,Remote,Under 20,Employed,Front-end developer,1,2024,2392.0
+Egypt,25-34,"Some university, no degree",5.0,3.0,Remote,"500-4,999",Employed,Mobile developer,1,2024,70000.0
+South Africa,25-34,Bachelor's degree,20.0,14.0,Remote,Under 20,Employed,Full-stack developer,1,2024,107617.0
+Other African country,25-34,Secondary or less,11.0,9.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2024,1754.0
+Kenya,25-34,Bachelor's degree,5.0,5.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2024,12335.0
+Ghana,25-34,Bachelor's degree,10.0,8.0,Hybrid,Freelancer (just me),Employed and freelancing,Full-stack developer,1,2024,1667.0
+Other African country,25-34,Secondary or less,12.0,10.0,In-person,Under 20,Employed and freelancing,Full-stack developer,0,2024,16000.0
+Kenya,25-34,Bachelor's degree,11.0,5.0,In-person,100-499,Employed,Full-stack developer,1,2024,35000.0
+South Africa,25-34,Secondary or less,18.0,8.0,Remote,Under 20,Employed,Full-stack developer,0,2024,36590.0
+Ghana,25-34,Bachelor's degree,4.0,4.0,In-person,100-499,Employed,Other tech role,1,2024,4800.0
+Nigeria,25-34,Bachelor's degree,8.0,6.0,Remote,"5,000+",Employed,Back-end developer,1,2024,9967.0
+Kenya,25-34,Bachelor's degree,6.0,3.0,Remote,20-99,Employed,Full-stack developer,1,2024,234883.0
+Morocco,18-24,Secondary or less,10.0,3.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2024,23114.0
+Other African country,25-34,Bachelor's degree,12.0,12.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2024,1500.0
+Ghana,25-34,Bachelor's degree,5.0,2.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2024,800.0
+Egypt,25-34,Bachelor's degree,5.0,3.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,3028.0
+South Africa,18-24,Bachelor's degree,4.0,0.5,Hybrid,20-99,Employed,Full-stack developer,1,2024,14205.0
+Morocco,25-34,Master's degree,10.0,7.0,In-person,20-99,Employed and freelancing,Other tech role,1,2024,2452.0
+Other African country,18-24,Secondary or less,3.0,0.5,Hybrid,100-499,Employed,Other tech role,1,2024,4724.0
+South Africa,25-34,"Some university, no degree",5.0,4.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,22600.0
+Other African country,18-24,Bachelor's degree,8.0,2.0,In-person,20-99,Employed,Full-stack developer,1,2024,635.0
+Tunisia,25-34,Associate degree,5.0,2.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,0,2024,2686.0
+Other African country,25-34,Bachelor's degree,12.0,12.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,36711.0
+Other African country,25-34,"Some university, no degree",7.0,6.0,Hybrid,"500-4,999",Employed and freelancing,Full-stack developer,1,2024,13616.0
+Egypt,18-24,Secondary or less,14.0,11.0,Remote,Under 20,Employed and freelancing,Other tech role,0,2024,5257.0
+Other African country,25-34,Bachelor's degree,7.0,7.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,11472.0
+Morocco,18-24,Bachelor's degree,6.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,15311.0
+South Africa,25-34,Master's degree,5.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,0,2024,27119.0
+Egypt,18-24,Bachelor's degree,4.0,1.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2024,2524.0
+South Africa,25-34,Master's degree,6.0,2.0,Hybrid,20-99,Employed,Other tech role,0,2024,40356.0
+Other African country,25-34,Master's degree,7.0,4.0,In-person,Under 20,Employed,Full-stack developer,1,2024,9123.0
+Nigeria,18-24,"Some university, no degree",9.0,5.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2024,2990.0
+Kenya,18-24,Bachelor's degree,3.0,3.0,In-person,100-499,Employed,Back-end developer,1,2024,15349.0
+Kenya,25-34,Bachelor's degree,8.0,7.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,11628.0
+South Africa,25-34,Bachelor's degree,15.0,8.0,Hybrid,"500-4,999",Employed,Other tech role,1,2024,64570.0
+Other African country,25-34,Master's degree,8.0,5.0,Hybrid,Under 20,Employed and freelancing,Full-stack developer,1,2024,7958.0
+Tunisia,18-24,Bachelor's degree,6.0,2.0,Hybrid,100-499,Employed,Other tech role,1,2024,7034.0
+Other African country,18-24,Bachelor's degree,2.0,1.0,Hybrid,20-99,Employed and freelancing,Full-stack developer,1,2024,7958.0
+South Africa,25-34,"Some university, no degree",9.0,7.0,Hybrid,20-99,Employed,Full-stack developer,1,2024,29057.0
+Other African country,18-24,"Some university, no degree",7.0,2.0,In-person,Under 20,Employed,Mobile developer,0,2024,15600.0
+Egypt,25-34,Bachelor's degree,9.0,6.0,Hybrid,20-99,Employed,Front-end developer,1,2024,1556.0
+South Africa,18-24,"Some university, no degree",7.0,0.5,Hybrid,Under 20,Employed,Front-end developer,1,2024,16143.0
+Egypt,25-34,Bachelor's degree,10.0,3.0,Hybrid,100-499,Employed,Back-end developer,1,2024,1514.0
+Egypt,25-34,Bachelor's degree,10.0,5.0,Hybrid,100-499,Employed,Mobile developer,1,2024,10515.0
+Kenya,18-24,Bachelor's degree,6.0,2.0,Remote,Under 20,Employed and freelancing,Full-stack developer,1,2024,11628.0
+Egypt,25-34,Bachelor's degree,14.0,10.0,Remote,100-499,Employed,Full-stack developer,0,2024,18000.0
+Other African country,25-34,Master's degree,12.0,12.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2024,22803.0
+South Africa,25-34,Master's degree,8.0,3.0,Hybrid,Under 20,Employed,Other tech role,1,2024,59189.0
+South Africa,25-34,Bachelor's degree,5.0,4.0,Remote,20-99,Employed and freelancing,Full-stack developer,1,2024,47782.0
+Nigeria,25-34,Bachelor's degree,11.0,6.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,1595.0
+Nigeria,18-24,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed,Back-end developer,1,2024,9967.0
+Morocco,25-34,Master's degree,7.0,3.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2024,10050.0
+Kenya,18-24,Bachelor's degree,4.0,1.0,Hybrid,"5,000+",Employed,Other tech role,0,2024,15504.0
+Ethiopia,25-34,Bachelor's degree,10.0,10.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2024,2000.0
+Other African country,25-34,Bachelor's degree,9.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,0,2024,4244.0
+Other African country,25-34,Bachelor's degree,5.0,1.0,Hybrid,Under 20,Employed,Other tech role,1,2024,6000.0
+Ghana,25-34,Bachelor's degree,15.0,8.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2024,66592.0
+South Africa,18-24,"Some university, no degree",4.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,0,2024,13092.0
+Other African country,25-34,Bachelor's degree,10.0,8.0,In-person,100-499,Employed,Data or AI,1,2024,12500.0
+Other African country,25-34,Master's degree,10.0,8.0,Remote,"500-4,999",Employed,Data or AI,1,2024,130000.0
+South Africa,25-34,Bachelor's degree,13.0,5.0,Remote,100-499,Employed,Full-stack developer,1,2024,44769.0
+Nigeria,18-24,Bachelor's degree,6.0,3.0,In-person,Under 20,Employed,Front-end developer,1,2024,1276.0
+South Africa,25-34,Bachelor's degree,16.0,10.0,Hybrid,"5,000+",Employed,Data or AI,1,2024,60265.0
+Algeria,25-34,Secondary or less,14.0,8.0,Hybrid,Under 20,Employed,Front-end developer,0,2024,15130.0
+Other African country,25-34,Bachelor's degree,10.0,6.0,Remote,Freelancer (just me),Employed and freelancing,Full-stack developer,0,2024,4170.0
+Algeria,25-34,Master's degree,10.0,2.0,Remote,Under 20,Employed,Full-stack developer,0,2024,5696.0
+South Africa,25-34,"Some university, no degree",13.0,9.0,Hybrid,"500-4,999",Employed,Back-end developer,0,2024,55273.0
+South Africa,25-34,Bachelor's degree,19.0,10.0,Remote,100-499,Employed,Full-stack developer,0,2024,48428.0
+Morocco,25-34,Master's degree,7.0,4.0,Hybrid,"5,000+",Employed,Back-end developer,1,2024,29546.0
+Egypt,18-24,Bachelor's degree,6.0,2.0,Remote,Under 20,Employed,Full-stack developer,1,2024,3554.0
+Kenya,25-34,Bachelor's degree,5.0,2.0,In-person,Under 20,Employed,Full-stack developer,1,2024,6512.0
+Kenya,25-34,Bachelor's degree,9.0,5.0,In-person,"5,000+",Employed,Back-end developer,0,2024,18000.0
+Nigeria,18-24,Bachelor's degree,5.0,2.0,Remote,20-99,Employed and freelancing,Front-end developer,1,2024,12000.0
+South Africa,18-24,"Some university, no degree",10.0,4.0,Remote,"500-4,999",Employed,Other tech role,1,2024,64570.0
+South Africa,25-34,Bachelor's degree,8.0,12.0,Remote,"500-4,999",Employed and freelancing,Front-end developer,0,2024,38742.0
+Egypt,25-34,Bachelor's degree,7.0,2.0,Hybrid,20-99,Employed,Front-end developer,1,2024,3785.0
+South Africa,25-34,"Some university, no degree",19.0,10.0,Remote,Under 20,Employed,Full-stack developer,1,2024,38645.0
+Other African country,18-24,Bachelor's degree,4.0,1.0,In-person,Under 20,Employed,Full-stack developer,1,2024,2869.0
+South Africa,25-34,Master's degree,7.0,3.0,Hybrid,20-99,Employed,Data or AI,0,2024,29057.0
+Morocco,25-34,Master's degree,4.0,2.0,Remote,Under 20,Employed,Full-stack developer,0,2024,15075.0
+South Africa,18-24,"Some university, no degree",5.0,2.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2024,4843.0
+Egypt,18-24,Bachelor's degree,4.0,0.0,Hybrid,Under 20,Employed and freelancing,Mobile developer,1,2024,2524.0
+Nigeria,25-34,Bachelor's degree,5.0,5.0,Remote,Under 20,Employed,Mobile developer,1,2024,5581.0
+Other African country,25-34,Master's degree,14.0,5.0,Remote,Under 20,Employed,Full-stack developer,0,2024,13423.0
+Kenya,25-34,Bachelor's degree,8.0,6.0,Hybrid,Under 20,Employed,Front-end developer,1,2024,9302.0
+Tunisia,25-34,Bachelor's degree,4.0,4.0,Hybrid,100-499,Employed,Mobile developer,0,2024,10599.0
+Morocco,25-34,Master's degree,13.0,10.0,Hybrid,"500-4,999",Employed,Other tech role,1,2024,30149.0
+South Africa,18-24,"Some university, no degree",9.0,0.5,In-person,20-99,Employed,Other tech role,1,2024,9686.0
+Egypt,25-34,Bachelor's degree,7.0,5.0,Hybrid,Under 20,Employed and freelancing,Back-end developer,0,2024,50000.0
+Tunisia,25-34,Master's degree,8.0,5.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2024,16921.0
+Morocco,25-34,Bachelor's degree,5.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,5025.0
+Ethiopia,18-24,Bachelor's degree,5.0,1.0,In-person,"500-4,999",Employed,Full-stack developer,1,2024,2090.0
+Kenya,25-34,Bachelor's degree,13.0,9.0,Hybrid,"5,000+",Employed,Other tech role,1,2024,93023.0
+South Africa,25-34,"Some university, no degree",7.0,4.0,Hybrid,"5,000+",Employed,Other tech role,1,2024,28788.0
+South Africa,18-24,Bachelor's degree,8.0,1.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,1157.0
+Egypt,25-34,Bachelor's degree,7.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2024,24000.0
+Other African country,25-34,Bachelor's degree,5.0,2.0,In-person,"500-4,999",Employed,Full-stack developer,0,2024,9673.0
+Morocco,18-24,Bachelor's degree,5.0,2.0,In-person,Under 20,Employed,Full-stack developer,0,2024,10854.0
+Morocco,18-24,Master's degree,6.0,2.0,In-person,100-499,Employed,Other tech role,1,2024,16984.0
+Other African country,25-34,"Some university, no degree",4.0,4.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,7852.0
+Other African country,25-34,Bachelor's degree,12.0,10.0,Hybrid,20-99,Employed,Back-end developer,1,2024,10473.0
+Morocco,25-34,Master's degree,12.0,12.0,Hybrid,Under 20,Employed,Full-stack developer,0,2024,10251.0
+Other African country,25-34,Master's degree,5.0,4.0,Remote,"5,000+",Employed,Back-end developer,1,2024,1037.0
+South Africa,25-34,Bachelor's degree,8.0,4.0,Remote,"500-4,999",Employed,Full-stack developer,0,2024,26780.0
+Tunisia,25-34,Bachelor's degree,9.0,3.0,In-person,Under 20,Employed,Full-stack developer,0,2024,2942.0
+Nigeria,25-34,Bachelor's degree,9.0,6.0,Remote,20-99,Employed,Other tech role,0,2024,1262.0
+Other African country,25-34,"Some university, no degree",7.0,5.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2024,15000.0
+Kenya,18-24,Bachelor's degree,4.0,2.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2024,1860.0
+Nigeria,25-34,Bachelor's degree,8.0,6.0,In-person,20-99,Employed,Mobile developer,1,2024,2857.0
+Nigeria,18-24,Secondary or less,8.0,5.0,Remote,Under 20,Employed and freelancing,Other tech role,1,2024,1329.0
+Other African country,25-34,"Some university, no degree",10.0,4.0,Remote,"5,000+",Freelancer or self-employed,Back-end developer,0,2024,59288.0
+South Africa,25-34,Bachelor's degree,17.0,10.0,Hybrid,Freelancer (just me),Employed and freelancing,Full-stack developer,0,2024,53808.0
+Nigeria,25-34,Bachelor's degree,14.0,5.0,In-person,Under 20,Employed,Full-stack developer,0,2024,2791.0
+Morocco,18-24,Bachelor's degree,5.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2024,2500.0
+Tunisia,25-34,Master's degree,7.0,1.0,In-person,20-99,Employed,Full-stack developer,1,2024,6715.0
+Tunisia,25-34,Master's degree,5.0,2.0,In-person,Under 20,Employed,Front-end developer,1,2024,3197.0
+Kenya,18-24,Bachelor's degree,3.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,0,2024,1860.0
+South Africa,25-34,Bachelor's degree,16.0,7.0,Remote,20-99,Employed,Back-end developer,0,2024,132907.0
+South Africa,18-24,Bachelor's degree,5.0,0.0,Hybrid,100-499,Employed,Other tech role,0,2024,24214.0
+Nigeria,25-34,Bachelor's degree,7.0,7.0,Remote,20-99,Employed,Full-stack developer,1,2024,3277.0
+Other African country,18-24,Bachelor's degree,14.0,2.0,Hybrid,100-499,Employed and freelancing,Full-stack developer,1,2024,17185.0
+Ethiopia,25-34,Master's degree,9.0,9.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2024,1741.0
+South Africa,25-34,Master's degree,10.0,5.0,In-person,"500-4,999",Employed,Other tech role,0,2024,44123.0
+South Africa,25-34,Secondary or less,8.0,3.0,In-person,Under 20,Employed,Back-end developer,0,2024,6995.0
+Egypt,25-34,Bachelor's degree,3.0,2.0,Hybrid,100-499,Employed,Data or AI,1,2024,10951.0
+South Africa,25-34,Associate degree,15.0,6.0,Hybrid,Under 20,Employed,Full-stack developer,1,2024,19371.0
+Other African country,25-34,Bachelor's degree,10.0,8.0,Remote,Under 20,Employed,Full-stack developer,1,2024,9811.0
+Kenya,18-24,Bachelor's degree,5.0,5.0,Remote,Under 20,Employed,Mobile developer,1,2024,775.0
+Nigeria,25-34,Bachelor's degree,5.0,4.0,Hybrid,20-99,Employed,Back-end developer,1,2024,6645.0
+Other African country,25-34,Bachelor's degree,5.0,4.0,Remote,Under 20,Employed and freelancing,Back-end developer,1,2024,30000.0
+Nigeria,25-34,Bachelor's degree,14.0,10.0,Remote,100-499,Employed,Other tech role,0,2024,23256.0
+Egypt,18-24,Bachelor's degree,2.0,2.0,Remote,Under 20,Employed,Full-stack developer,1,2025,2157.0
+Morocco,18-24,Master's degree,4.0,1.0,Remote,"5,000+",Employed,Full-stack developer,1,2025,12533.0
+Tunisia,25-34,Bachelor's degree,9.0,5.0,In-person,20-99,Employed,Back-end developer,0,2025,9368.0
+Other African country,25-34,Bachelor's degree,10.0,8.0,In-person,"5,000+",Employed,Data or AI,1,2025,9381.0
+Egypt,18-24,Bachelor's degree,7.0,7.0,Hybrid,Under 20,Freelancer or self-employed,Mobile developer,0,2025,100000.0
+South Africa,25-34,"Some university, no degree",20.0,10.0,Remote,Under 20,Employed,Full-stack developer,1,2025,31121.0
+Morocco,25-34,Master's degree,8.0,7.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2025,13192.0
+Other African country,25-34,Bachelor's degree,5.0,2.0,In-person,"5,000+",Employed,Other tech role,0,2025,3241.0
+South Africa,25-34,Secondary or less,12.0,12.0,Remote,"500-4,999",Employed,Full-stack developer,1,2025,67655.0
+Algeria,25-34,Master's degree,7.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2025,20883.0
+Nigeria,25-34,Bachelor's degree,6.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,646.0
+Kenya,25-34,Bachelor's degree,9.0,7.0,Remote,Under 20,Employed,Full-stack developer,0,2025,76800.0
+Ghana,25-34,Bachelor's degree,5.0,5.0,Remote,Under 20,Employed,Other tech role,1,2025,8121.0
+Algeria,25-34,Master's degree,15.0,2.0,In-person,20-99,Employed,Full-stack developer,1,2025,4438.0
+South Africa,25-34,"Some university, no degree",14.0,10.0,Remote,100-499,Employed,Full-stack developer,1,2025,3947.0
+Morocco,18-24,Bachelor's degree,6.0,1.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2025,12093.0
+South Africa,25-34,Bachelor's degree,14.0,5.0,In-person,"5,000+",Employed,Back-end developer,1,2025,67655.0
+Egypt,25-34,Bachelor's degree,10.0,8.0,Hybrid,"500-4,999",Employed,Mobile developer,0,2025,40605.0
+Egypt,25-34,Bachelor's degree,3.0,1.0,Hybrid,"500-4,999",Employed,Other tech role,0,2025,5992.0
+South Africa,18-24,Bachelor's degree,9.0,4.0,Hybrid,100-499,Employed,Full-stack developer,0,2025,20296.0
+Kenya,25-34,Bachelor's degree,4.0,7.0,Hybrid,"500-4,999",Employed,Data or AI,1,2025,15480.0
+South Africa,18-24,Bachelor's degree,8.0,1.0,Remote,Under 20,Employed,Other tech role,1,2025,10486.0
+South Africa,25-34,"Some university, no degree",11.0,4.0,In-person,Under 20,Employed,Full-stack developer,0,2025,16914.0
+Other African country,25-34,Master's degree,9.0,6.0,In-person,"500-4,999",Employed,Mobile developer,1,2025,711.0
+Egypt,25-34,Bachelor's degree,7.0,7.0,Hybrid,"5,000+",Employed,Back-end developer,1,2025,1722.0
+Kenya,25-34,"Some university, no degree",17.0,13.0,Remote,100-499,Employed,Back-end developer,0,2025,128400.0
+Other African country,25-34,Bachelor's degree,10.0,8.0,In-person,Under 20,Employed,Data or AI,0,2025,4059.0
+Nigeria,25-34,Bachelor's degree,11.0,10.0,Hybrid,20-99,Employed,Back-end developer,0,2025,7748.0
+Egypt,25-34,Bachelor's degree,5.0,4.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2025,31955.0
+Tunisia,25-34,Master's degree,7.0,1.0,In-person,Under 20,Employed,Full-stack developer,1,2025,4073.0
+Ghana,25-34,Bachelor's degree,8.0,3.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,0,2025,4254.0
+Other African country,25-34,Bachelor's degree,14.0,7.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2025,2000.0
+Egypt,18-24,Bachelor's degree,10.0,8.0,Hybrid,100-499,Employed,Mobile developer,0,2025,10984.0
+Kenya,25-34,Bachelor's degree,10.0,8.0,In-person,"500-4,999",Employed,Front-end developer,0,2025,17415.0
+Other African country,18-24,Bachelor's degree,9.0,1.0,In-person,Under 20,Employed,Other tech role,1,2025,4459.0
+Nigeria,25-34,Bachelor's degree,12.0,9.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2025,3000.0
+South Africa,25-34,Associate degree,6.0,4.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,19958.0
+Kenya,25-34,Bachelor's degree,5.0,3.0,In-person,Freelancer (just me),Employed,Other tech role,0,2025,774.0
+Other African country,25-34,Bachelor's degree,8.0,8.0,In-person,20-99,Employed,Full-stack developer,1,2025,17690.0
+South Africa,25-34,Bachelor's degree,8.0,8.0,Remote,"5,000+",Employed,Data or AI,1,2025,90206.0
+South Africa,18-24,Master's degree,8.0,3.0,Hybrid,20-99,Employed,Full-stack developer,0,2025,2255.0
+Egypt,25-34,Bachelor's degree,20.0,15.0,Remote,Under 20,Employed,Back-end developer,1,2025,8788.0
+Tunisia,25-34,Doctorate or professional degree,9.0,5.0,Hybrid,20-99,Employed,Other tech role,1,2025,18330.0
+Other African country,25-34,"Some university, no degree",5.0,5.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2025,3334.0
+Egypt,25-34,Bachelor's degree,9.0,5.0,Hybrid,"5,000+",Employed,Full-stack developer,0,2025,27960.0
+Kenya,25-34,Bachelor's degree,6.0,3.0,In-person,Under 20,Employed,Data or AI,0,2025,1548.0
+Nigeria,18-24,Bachelor's degree,15.0,2.0,In-person,100-499,Employed,Other tech role,0,2025,1291.0
+Egypt,18-24,Bachelor's degree,4.0,2.0,Hybrid,Under 20,Employed,Back-end developer,0,2025,3595.0
+Other African country,25-34,Bachelor's degree,20.0,14.0,Hybrid,Under 20,Employed,Data or AI,0,2025,29088.0
+Other African country,18-24,Bachelor's degree,6.0,5.0,Remote,100-499,Employed,Back-end developer,1,2025,9600.0
+Kenya,25-34,Secondary or less,8.0,7.0,Hybrid,Under 20,Employed,Full-stack developer,0,2025,15480.0
+Kenya,18-24,Bachelor's degree,8.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Data or AI,0,2025,61919.0
+Egypt,25-34,Bachelor's degree,14.0,8.0,In-person,"500-4,999",Employed,Other tech role,1,2025,3048.0
+Other African country,25-34,Bachelor's degree,11.0,9.0,In-person,Under 20,Employed,Full-stack developer,1,2025,6451.0
+South Africa,25-34,Master's degree,12.0,2.0,Hybrid,20-99,Employed,Other tech role,1,2025,39465.0
+Kenya,25-34,"Some university, no degree",7.0,7.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,0,2025,929.0
+Egypt,25-34,Bachelor's degree,6.0,3.0,Hybrid,100-499,Employed,Full-stack developer,1,2025,8788.0
+Other African country,25-34,Master's degree,7.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,121570.0
+South Africa,18-24,Secondary or less,7.0,6.0,Remote,100-499,Employed,Data or AI,1,2025,78930.0
+Nigeria,18-24,Bachelor's degree,10.0,2.0,Hybrid,Under 20,Employed,Mobile developer,1,2025,1937.0
+South Africa,25-34,"Some university, no degree",15.0,10.0,Remote,Under 20,Employed,Back-end developer,1,2025,43975.0
+Egypt,25-34,Bachelor's degree,13.0,1.0,Hybrid,100-499,Employed,Full-stack developer,1,2025,639.0
+South Africa,25-34,Secondary or less,10.0,10.0,Remote,20-99,Employed,Full-stack developer,1,2025,61793.0
+Kenya,25-34,Bachelor's degree,6.0,4.0,In-person,20-99,Employed,Other tech role,1,2025,6192.0
+South Africa,18-24,Secondary or less,7.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2025,18605.0
+Other African country,25-34,Master's degree,10.0,5.0,In-person,Under 20,Employed,Full-stack developer,1,2025,2654.0
+South Africa,18-24,Secondary or less,7.0,6.0,In-person,20-99,Employed,Other tech role,1,2025,6596.0
+Nigeria,25-34,Doctorate or professional degree,7.0,4.0,Remote,Under 20,Freelancer or self-employed,Back-end developer,0,2025,60000.0
+Egypt,25-34,Bachelor's degree,9.0,8.0,Remote,100-499,Employed,Back-end developer,1,2025,25800.0
+Tunisia,25-34,Master's degree,14.0,10.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,628.0
+Nigeria,25-34,Bachelor's degree,3.0,2.0,Remote,100-499,Employed,Data or AI,0,2025,1550.0
+Tunisia,18-24,Bachelor's degree,6.0,3.0,Hybrid,Under 20,Employed,Other tech role,0,2025,5092.0
+Other African country,18-24,Bachelor's degree,5.0,1.0,In-person,Under 20,Employed,Data or AI,1,2025,10577.0
+South Africa,25-34,"Some university, no degree",2.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2025,3383.0
+Algeria,18-24,Bachelor's degree,4.0,3.0,In-person,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,1156.0
+Kenya,25-34,Bachelor's degree,7.0,4.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,7895.0
+Nigeria,25-34,Master's degree,9.0,6.0,Remote,20-99,Employed,Mobile developer,1,2025,9685.0
+Nigeria,18-24,Bachelor's degree,5.0,3.0,Remote,100-499,Employed,Mobile developer,0,2025,3564.0
+Morocco,25-34,Doctorate or professional degree,10.0,5.0,In-person,20-99,Employed,Other tech role,0,2025,36278.0
+Other African country,25-34,Master's degree,13.0,11.0,In-person,"500-4,999",Employed,Other tech role,1,2025,36089.0
+Kenya,25-34,Bachelor's degree,6.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2025,5418.0
+South Africa,25-34,Bachelor's degree,9.0,4.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2025,38112.0
+Other African country,25-34,Bachelor's degree,10.0,6.0,In-person,20-99,Employed,Data or AI,1,2025,33966.0
+Kenya,25-34,Bachelor's degree,9.0,6.0,Hybrid,100-499,Employed,Full-stack developer,1,2025,15480.0
+Ghana,25-34,Bachelor's degree,10.0,10.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,1934.0
+South Africa,25-34,"Some university, no degree",10.0,10.0,In-person,20-99,Employed,Other tech role,1,2025,28520.0
+South Africa,25-34,Bachelor's degree,10.0,5.0,Remote,"5,000+",Employed,Full-stack developer,1,2025,43694.0
+South Africa,25-34,"Some university, no degree",11.0,9.0,Hybrid,20-99,Employed,Full-stack developer,0,2025,32136.0
+South Africa,25-34,"Some university, no degree",15.0,13.0,Remote,Under 20,Employed,Other tech role,1,2025,6765.0
+Morocco,25-34,Secondary or less,10.0,6.0,Hybrid,20-99,Employed,Back-end developer,1,2025,25065.0
+Other African country,25-34,Master's degree,13.0,8.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,3376.0
+Egypt,25-34,Bachelor's degree,9.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,4254.0
+South Africa,25-34,"Some university, no degree",12.0,10.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2025,43412.0
+Tunisia,25-34,Master's degree,15.0,5.0,Hybrid,100-499,Employed,Other tech role,0,2025,31114.0
+Morocco,25-34,Bachelor's degree,12.0,9.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,21877.0
+South Africa,25-34,Bachelor's degree,20.0,7.0,In-person,Under 20,Employed,Full-stack developer,0,2025,52038.0
+Kenya,25-34,Bachelor's degree,12.0,10.0,Hybrid,20-99,Employed,Full-stack developer,0,2025,77399.0
+Other African country,18-24,Bachelor's degree,6.0,2.0,Remote,Under 20,Employed,Full-stack developer,1,2025,9381.0
+Egypt,18-24,Bachelor's degree,6.0,2.0,Remote,"500-4,999",Employed,Data or AI,1,2025,4793.0
+Other African country,18-24,Bachelor's degree,8.0,8.0,Hybrid,Under 20,Employed,Full-stack developer,0,2025,4000.0
+Kenya,25-34,"Some university, no degree",15.0,9.0,Hybrid,Under 20,Employed,Back-end developer,1,2025,3870.0
+Morocco,25-34,Bachelor's degree,7.0,5.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2025,15000.0
+Egypt,18-24,Bachelor's degree,4.0,2.0,Remote,Under 20,Employed,Full-stack developer,1,2025,3595.0
+Tunisia,25-34,Master's degree,6.0,2.0,In-person,Under 20,Employed,Front-end developer,0,2025,6517.0
+South Africa,25-34,Bachelor's degree,12.0,9.0,Remote,20-99,Employed,Full-stack developer,1,2025,37210.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,Hybrid,100-499,Employed,Full-stack developer,0,2025,27718.0
+South Africa,25-34,"Some university, no degree",12.0,5.0,In-person,20-99,Employed,Other tech role,1,2025,37210.0
+Nigeria,25-34,Bachelor's degree,5.0,5.0,In-person,"5,000+",Employed,Other tech role,0,2025,8258.0
+Egypt,25-34,Bachelor's degree,6.0,5.0,Remote,20-99,Employed,Back-end developer,1,2025,17975.0
+Ghana,25-34,Master's degree,10.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,7251.0
+Ghana,25-34,Bachelor's degree,9.0,7.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2025,58006.0
+Kenya,18-24,Associate degree,6.0,4.0,In-person,20-99,Employed,Other tech role,0,2025,4257.0
+Kenya,25-34,"Some university, no degree",4.0,3.0,Hybrid,Under 20,Freelancer or self-employed,Other tech role,1,2025,929.0
+Nigeria,25-34,Secondary or less,9.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,1937.0
+South Africa,18-24,Bachelor's degree,13.0,3.0,Remote,20-99,Employed,Full-stack developer,1,2025,18267.0
+Other African country,25-34,Bachelor's degree,3.0,1.0,Hybrid,20-99,Employed,Full-stack developer,0,2025,5541.0
+Nigeria,25-34,Bachelor's degree,12.0,10.0,Remote,"5,000+",Freelancer or self-employed,Mobile developer,1,2025,60000.0
+Nigeria,25-34,Bachelor's degree,3.0,3.0,Remote,20-99,Employed,Other tech role,0,2025,38739.0
+Egypt,25-34,Bachelor's degree,9.0,6.0,Hybrid,20-99,Employed,Mobile developer,0,2025,19173.0
+Other African country,18-24,Bachelor's degree,5.0,5.0,In-person,20-99,Employed,Back-end developer,0,2025,12737.0
+Other African country,25-34,Secondary or less,4.0,3.0,Remote,Freelancer (just me),Employed,Full-stack developer,0,2025,2251.0
+Algeria,18-24,Master's degree,4.0,2.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,0,2025,12000.0
+Egypt,25-34,Bachelor's degree,8.0,2.0,Hybrid,20-99,Employed,Back-end developer,0,2025,7190.0
+Other African country,25-34,Bachelor's degree,10.0,5.0,In-person,Under 20,Employed,Full-stack developer,1,2025,855.0
+Nigeria,25-34,Bachelor's degree,4.0,1.0,In-person,Under 20,Employed,Front-end developer,1,2025,1291.0
+South Africa,18-24,Bachelor's degree,5.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,13531.0
+South Africa,25-34,Bachelor's degree,13.0,9.0,Remote,Under 20,Employed,Back-end developer,0,2025,84568.0
+South Africa,25-34,Bachelor's degree,15.0,10.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,56379.0
+South Africa,25-34,Bachelor's degree,13.0,5.0,In-person,Under 20,Employed,Full-stack developer,0,2025,1973.0
+South Africa,25-34,Bachelor's degree,18.0,15.0,Hybrid,"500-4,999",Employed,Other tech role,1,2025,84286.0
+Nigeria,25-34,Bachelor's degree,2.0,5.0,Hybrid,Under 20,Employed,Other tech role,1,2025,2712.0
+Tunisia,25-34,Bachelor's degree,8.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,40000.0
+Tunisia,25-34,Master's degree,6.0,3.0,In-person,100-499,Employed,Full-stack developer,0,2025,24028.0
+Nigeria,25-34,Bachelor's degree,1.0,3.0,In-person,100-499,Employed,Data or AI,0,2025,2712.0
+Other African country,25-34,"Some university, no degree",6.0,2.0,Hybrid,20-99,Employed,Other tech role,1,2025,3440.0
+Egypt,18-24,Bachelor's degree,5.0,1.0,Remote,Under 20,Employed,Full-stack developer,1,2025,7989.0
+Nigeria,18-24,Bachelor's degree,4.0,3.0,Remote,Under 20,Employed,Front-end developer,1,2025,2402.0
+South Africa,25-34,"Some university, no degree",15.0,8.0,Remote,100-499,Employed,Full-stack developer,1,2025,45103.0
+Algeria,25-34,Master's degree,12.0,6.0,Remote,Under 20,Employed,Full-stack developer,1,2025,23114.0
+Egypt,25-34,Bachelor's degree,6.0,6.0,Remote,20-99,Employed,Full-stack developer,1,2025,12000.0
+South Africa,18-24,Bachelor's degree,5.0,2.0,Remote,Under 20,Employed,Front-end developer,0,2025,20296.0
+Kenya,25-34,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed,Back-end developer,1,2025,6192.0
+Kenya,25-34,Bachelor's degree,6.0,5.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,2090.0
+South Africa,25-34,Bachelor's degree,10.0,1.0,In-person,20-99,Employed,Other tech role,0,2025,17759.0
+Kenya,25-34,Bachelor's degree,11.0,8.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,53405.0
+Kenya,25-34,Secondary or less,14.0,11.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,23220.0
+South Africa,25-34,Bachelor's degree,11.0,6.0,In-person,20-99,Employed,Full-stack developer,0,2025,21142.0
+Ethiopia,25-34,Bachelor's degree,8.0,5.0,Remote,Under 20,Employed,Full-stack developer,0,2025,36000.0
+Nigeria,18-24,Bachelor's degree,10.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2025,1614.0
+Other African country,25-34,Master's degree,3.0,6.0,In-person,100-499,Employed,Other tech role,0,2025,5561.0
+Egypt,25-34,Bachelor's degree,10.0,6.0,Hybrid,Under 20,Employed,Mobile developer,1,2025,12223.0
+Egypt,25-34,Bachelor's degree,9.0,4.0,Remote,20-99,Employed,Full-stack developer,0,2025,29958.0
+Other African country,25-34,Master's degree,14.0,10.0,Remote,Under 20,Freelancer or self-employed,Other tech role,0,2025,1740.0
+Nigeria,25-34,Bachelor's degree,4.0,2.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2025,1291.0
+Nigeria,25-34,Bachelor's degree,6.0,6.0,Hybrid,"500-4,999",Employed,Front-end developer,1,2025,10330.0
+Kenya,25-34,Bachelor's degree,8.0,5.0,In-person,"5,000+",Employed,Data or AI,1,2025,11145.0
+South Africa,25-34,Master's degree,25.0,10.0,In-person,Under 20,Employed,Other tech role,0,2025,47358.0
+Egypt,25-34,Bachelor's degree,4.0,4.0,Remote,100-499,Employed,Front-end developer,0,2025,22800.0
+Algeria,18-24,Master's degree,6.0,1.0,Hybrid,Under 20,Employed,Back-end developer,1,2025,7705.0
+Nigeria,25-34,Bachelor's degree,5.0,4.0,Hybrid,Under 20,Employed,Front-end developer,0,2025,1317.0
+Morocco,25-34,Master's degree,9.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,0,2025,34300.0
+Other African country,25-34,Bachelor's degree,10.0,6.0,In-person,Under 20,Freelancer or self-employed,Front-end developer,0,2025,2822.0
+Kenya,25-34,"Some university, no degree",5.0,3.0,Remote,Under 20,Freelancer or self-employed,Other tech role,0,2025,30000.0
+South Africa,25-34,"Some university, no degree",19.0,8.0,Hybrid,"5,000+",Employed,Back-end developer,1,2025,46005.0
+South Africa,25-34,Secondary or less,10.0,5.0,In-person,Under 20,Employed,Full-stack developer,1,2025,8119.0
+Morocco,25-34,Bachelor's degree,10.0,8.0,In-person,20-99,Employed,Other tech role,1,2025,47492.0
+Egypt,18-24,"Some university, no degree",5.0,1.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,7789.0
+Egypt,18-24,Bachelor's degree,5.0,1.0,Remote,20-99,Employed,Full-stack developer,1,2025,1917.0
+South Africa,25-34,"Some university, no degree",1.0,9.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2025,12403.0
+South Africa,18-24,Bachelor's degree,6.0,3.0,Hybrid,Under 20,Employed,Data or AI,0,2025,5920.0
+Nigeria,25-34,Master's degree,10.0,7.0,Hybrid,100-499,Employed,Back-end developer,0,2025,1085.0
+Ethiopia,25-34,Bachelor's degree,12.0,8.0,In-person,"500-4,999",Employed,Full-stack developer,1,2025,1747.0
+South Africa,25-34,Doctorate or professional degree,8.0,10.0,Remote,20-99,Employed,Other tech role,1,2025,104865.0
+Tunisia,25-34,Bachelor's degree,10.0,4.0,Hybrid,"500-4,999",Employed,Back-end developer,1,2025,1358.0
+Kenya,18-24,Bachelor's degree,6.0,2.0,Hybrid,"5,000+",Employed,Back-end developer,1,2025,39473.0
+South Africa,25-34,Master's degree,5.0,5.0,In-person,100-499,Employed,Other tech role,0,2025,28189.0
+Egypt,25-34,Bachelor's degree,7.0,3.0,Remote,Under 20,Employed,Mobile developer,1,2025,12000.0
+South Africa,25-34,Bachelor's degree,3.0,2.0,Hybrid,20-99,Employed,Full-stack developer,1,2025,15899.0
+Other African country,18-24,"Some university, no degree",2.0,1.0,In-person,Under 20,Employed,Full-stack developer,1,2025,4877.0
+Morocco,18-24,Master's degree,5.0,2.0,In-person,"500-4,999",Employed,Full-stack developer,1,2025,21987.0
+Tunisia,25-34,Master's degree,8.0,2.0,Remote,20-99,Employed,Other tech role,1,2025,11812.0
+Nigeria,25-34,Bachelor's degree,7.0,7.0,Remote,20-99,Freelancer or self-employed,Full-stack developer,1,2025,3874.0
+Kenya,18-24,Bachelor's degree,6.0,4.0,In-person,Under 20,Employed,Front-end developer,1,2025,8514.0
+South Africa,25-34,Bachelor's degree,13.0,9.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2025,60136.0
+Other African country,18-24,Bachelor's degree,5.0,1.0,In-person,Under 20,Employed,Full-stack developer,1,2025,10313.0
+Nigeria,25-34,Secondary or less,1.0,8.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2025,700.0
+South Africa,18-24,"Some university, no degree",9.0,5.0,In-person,20-99,Employed,Other tech role,0,2025,23679.0
+Other African country,25-34,"Some university, no degree",4.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2025,1061.0
+Nigeria,18-24,Bachelor's degree,7.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2025,775.0
+South Africa,25-34,Master's degree,3.0,9.0,Hybrid,"5,000+",Employed,Data or AI,1,2025,73292.0
+South Africa,25-34,"Some university, no degree",15.0,9.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2025,38676.0
+Other African country,18-24,Bachelor's degree,8.0,2.0,In-person,Under 20,Employed,Other tech role,1,2025,5300.0
+Other African country,25-34,Bachelor's degree,11.0,5.0,Remote,20-99,Employed,Full-stack developer,0,2025,30000.0
+Ethiopia,25-34,Bachelor's degree,5.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2025,36000.0
+South Africa,25-34,Bachelor's degree,12.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,0,2025,20296.0
+Other African country,25-34,Bachelor's degree,7.0,7.0,In-person,Under 20,Freelancer or self-employed,Other tech role,1,2025,3387.0
+Kenya,18-24,Bachelor's degree,4.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Mobile developer,1,2025,4644.0
+Other African country,25-34,Bachelor's degree,14.0,8.0,Remote,20-99,Freelancer or self-employed,Full-stack developer,0,2025,30000.0
+Kenya,18-24,Secondary or less,1.0,6.0,Hybrid,Under 20,Employed,Other tech role,0,2025,619.0
+South Africa,25-34,"Some university, no degree",7.0,5.0,Hybrid,100-499,Employed,Back-end developer,1,2025,33827.0
+Kenya,25-34,Bachelor's degree,9.0,8.0,In-person,"5,000+",Freelancer or self-employed,Other tech role,0,2025,45363.0
+South Africa,18-24,Bachelor's degree,6.0,3.0,In-person,Under 20,Employed,Back-end developer,0,2025,25652.0
+South Africa,25-34,Bachelor's degree,8.0,5.0,Remote,Under 20,Employed,Front-end developer,1,2025,25370.0
+Morocco,25-34,Master's degree,9.0,5.0,Remote,20-99,Employed,Full-stack developer,1,2025,52769.0
+Nigeria,25-34,Bachelor's degree,9.0,6.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2025,1098.0
+Nigeria,25-34,Bachelor's degree,3.0,2.0,Remote,Under 20,Employed,Front-end developer,1,2025,3777.0
+Other African country,25-34,"Some university, no degree",7.0,1.0,In-person,"500-4,999",Employed,Other tech role,1,2025,5833.0
+South Africa,18-24,Associate degree,7.0,1.0,Hybrid,Under 20,Employed,Full-stack developer,1,2025,14546.0
+Kenya,25-34,Bachelor's degree,6.0,6.0,Hybrid,Under 20,Employed,Full-stack developer,0,2025,19350.0
+Other African country,25-34,Bachelor's degree,11.0,6.0,In-person,100-499,Employed,Other tech role,0,2025,13348.0
+Nigeria,18-24,"Some university, no degree",8.0,6.0,Remote,"500-4,999",Employed,Back-end developer,1,2025,5423.0
+Kenya,25-34,Bachelor's degree,5.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2025,2322.0
+Other African country,25-34,Bachelor's degree,1.0,8.0,In-person,100-499,Employed,Other tech role,0,2025,13849.0
+Egypt,25-34,Bachelor's degree,10.0,6.0,Remote,Under 20,Employed,Mobile developer,0,2025,39943.0
+Morocco,25-34,Secondary or less,13.0,5.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2025,25368.0
+Other African country,18-24,Bachelor's degree,7.0,6.0,Remote,20-99,Employed,Full-stack developer,1,2025,12000.0
+Nigeria,18-24,Bachelor's degree,7.0,3.0,Hybrid,"5,000+",Employed,Full-stack developer,0,2025,8393.0
+Nigeria,25-34,Doctorate or professional degree,3.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,6456.0
+Other African country,25-34,Bachelor's degree,7.0,4.0,In-person,"500-4,999",Employed,Data or AI,0,2025,10944.0
+South Africa,25-34,Secondary or less,9.0,5.0,Hybrid,100-499,Employed,Full-stack developer,1,2025,39240.0
+Kenya,25-34,"Some university, no degree",2.0,4.0,Hybrid,"5,000+",Employed,Other tech role,1,2025,11610.0
+South Africa,25-34,Master's degree,15.0,11.0,Hybrid,20-99,Employed,Mobile developer,1,2025,5638.0
+Other African country,25-34,Bachelor's degree,11.0,11.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2025,10000.0
+Nigeria,25-34,Bachelor's degree,2.0,3.0,In-person,20-99,Employed,Other tech role,0,2025,1130.0
+Nigeria,25-34,Bachelor's degree,9.0,4.0,Remote,20-99,Employed,Back-end developer,1,2025,9685.0
+Ghana,18-24,Bachelor's degree,9.0,4.0,Hybrid,20-99,Employed,Full-stack developer,0,2025,15082.0
+Other African country,25-34,Bachelor's degree,12.0,5.0,In-person,100-499,Employed,Data or AI,0,2025,5005.0
+South Africa,25-34,Bachelor's degree,7.0,2.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2025,23003.0
+Tunisia,25-34,Doctorate or professional degree,12.0,8.0,Hybrid,100-499,Employed,Other tech role,0,2025,40733.0
+Other African country,25-34,Master's degree,5.0,1.0,Hybrid,Under 20,Employed,Data or AI,1,2025,1697.0
+South Africa,18-24,Bachelor's degree,8.0,1.0,Hybrid,"500-4,999",Employed,Front-end developer,0,2025,18943.0
+South Africa,25-34,Bachelor's degree,5.0,2.0,Remote,100-499,Employed,Full-stack developer,0,2025,13531.0
+Other African country,25-34,Master's degree,9.0,4.0,In-person,"500-4,999",Employed,Full-stack developer,1,2025,20167.0
+South Africa,18-24,Bachelor's degree,10.0,2.0,Hybrid,"500-4,999",Employed,Other tech role,1,2025,30783.0
+Nigeria,25-34,Bachelor's degree,9.0,4.0,Remote,20-99,Employed,Back-end developer,1,2025,9685.0
+Other African country,25-34,Bachelor's degree,12.0,3.0,In-person,Under 20,Employed,Full-stack developer,1,2025,5014.0
+South Africa,25-34,Master's degree,10.0,2.0,Hybrid,100-499,Employed,Other tech role,0,2025,33151.0
+Kenya,25-34,Bachelor's degree,8.0,4.0,In-person,Under 20,Employed,Back-end developer,1,2025,6502.0
+Morocco,18-24,Master's degree,7.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,0,2025,18469.0
+Egypt,25-34,Bachelor's degree,9.0,8.0,Hybrid,Under 20,Employed,Front-end developer,1,2025,11983.0
+Nigeria,18-24,Bachelor's degree,10.0,6.0,Remote,Under 20,Employed,Front-end developer,0,2025,15000.0
+Nigeria,25-34,Bachelor's degree,4.0,3.0,Remote,Freelancer (just me),Employed,Other tech role,1,2025,12000.0
+Egypt,25-34,Master's degree,8.0,6.0,Remote,20-99,Employed,Mobile developer,1,2025,1698.0
+South Africa,25-34,"Some university, no degree",8.0,5.0,In-person,"5,000+",Employed,Back-end developer,0,2025,21649.0
+Other African country,18-24,Bachelor's degree,5.0,1.0,In-person,Under 20,Employed,Back-end developer,0,2025,5000.0
+Kenya,18-24,Bachelor's degree,6.0,4.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2025,4644.0
+South Africa,25-34,Bachelor's degree,5.0,2.0,Hybrid,100-499,Employed,Full-stack developer,1,2025,21424.0
+Egypt,25-34,Bachelor's degree,4.0,5.0,Remote,20-99,Employed,Full-stack developer,1,2025,14000.0
+South Africa,25-34,Bachelor's degree,6.0,3.0,Hybrid,"5,000+",Employed,Other tech role,1,2025,21424.0
+Other African country,18-24,Secondary or less,3.0,1.0,In-person,Under 20,Employed,Full-stack developer,1,2025,1386.0
+Kenya,25-34,Associate degree,6.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Mobile developer,1,2025,18576.0
+Nigeria,25-34,Bachelor's degree,8.0,5.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2025,1291.0
+Other African country,25-34,Bachelor's degree,9.0,5.0,Hybrid,Under 20,Employed,Other tech role,1,2025,4246.0
+South Africa,25-34,Bachelor's degree,11.0,8.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2025,56830.0
+Nigeria,25-34,Bachelor's degree,10.0,5.0,Hybrid,100-499,Employed,Full-stack developer,0,2025,5165.0
+Ghana,25-34,Secondary or less,6.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,1,2025,1160.0
+South Africa,25-34,"Some university, no degree",8.0,6.0,Remote,100-499,Employed,Mobile developer,1,2025,33151.0
+Egypt,25-34,Bachelor's degree,8.0,7.0,Remote,20-99,Employed,Mobile developer,1,2025,23966.0
+Ghana,25-34,Secondary or less,3.0,8.0,Hybrid,20-99,Freelancer or self-employed,Back-end developer,1,2025,696.0
+Ghana,25-34,Bachelor's degree,6.0,3.0,Hybrid,"500-4,999",Employed,Data or AI,0,2025,8121.0
+South Africa,25-34,Bachelor's degree,8.0,10.0,Remote,100-499,Employed,Other tech role,1,2025,56379.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,In-person,Under 20,Employed,Front-end developer,1,2025,5613.0
+South Africa,25-34,Bachelor's degree,4.0,2.0,Hybrid,20-99,Employed,Other tech role,1,2025,19056.0
+South Africa,25-34,"Some university, no degree",16.0,12.0,Remote,20-99,Employed,Front-end developer,0,2025,39465.0
+Kenya,25-34,Bachelor's degree,8.0,5.0,Hybrid,"500-4,999",Employed,Other tech role,1,2025,100000.0
+South Africa,25-34,Bachelor's degree,13.0,9.0,In-person,20-99,Employed,Full-stack developer,0,2025,50538.0
+Nigeria,18-24,Bachelor's degree,10.0,4.0,Hybrid,20-99,Employed,Other tech role,1,2025,3787.0
+Other African country,25-34,"Some university, no degree",1.0,6.0,Hybrid,Under 20,Employed,Other tech role,1,2025,20789.0
+Morocco,18-24,Associate degree,3.0,2.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2025,32980.0
+Kenya,25-34,"Some university, no degree",4.0,3.0,Remote,20-99,Freelancer or self-employed,Full-stack developer,1,2025,3483.0
+Other African country,25-34,Bachelor's degree,8.0,6.0,Remote,Under 20,Employed,Full-stack developer,1,2025,31000.0
+Egypt,18-24,"Some university, no degree",1.0,1.0,In-person,20-99,Employed,Back-end developer,1,2025,719.0
+Other African country,25-34,Bachelor's degree,9.0,7.0,In-person,"5,000+",Employed,Back-end developer,0,2026,6236.0
+Nigeria,25-34,Bachelor's degree,4.0,3.0,Hybrid,Under 20,Employed,Mobile developer,1,2026,1933.0
+Other African country,25-34,Bachelor's degree,8.0,5.0,Hybrid,"500-4,999",Employed,Data or AI,1,2026,23000.0
+South Africa,25-34,Bachelor's degree,16.0,10.0,Hybrid,20-99,Employed,Full-stack developer,1,2026,50188.0
+South Africa,25-34,Master's degree,15.0,4.0,Remote,20-99,Employed,Other tech role,0,2026,43018.0
+Morocco,25-34,Master's degree,6.0,2.0,In-person,"500-4,999",Employed,Full-stack developer,0,2026,20469.0
+Egypt,25-34,Bachelor's degree,11.0,9.0,Remote,"500-4,999",Employed,Front-end developer,0,2026,791.0
+Egypt,18-24,Bachelor's degree,11.0,8.0,Hybrid,100-499,Employed,Mobile developer,0,2026,15360.0
+Nigeria,25-34,Bachelor's degree,7.0,5.0,In-person,100-499,Employed,Data or AI,1,2026,7324.0
+Kenya,25-34,Bachelor's degree,10.0,6.0,Hybrid,"5,000+",Employed,Full-stack developer,0,2026,77222.0
+South Africa,25-34,Associate degree,6.0,3.0,Hybrid,20-99,Employed,Other tech role,0,2026,896.0
+Nigeria,18-24,Secondary or less,6.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,0,2026,1406.0
+Tunisia,25-34,"Some university, no degree",4.0,4.0,Remote,Under 20,Employed,Full-stack developer,0,2026,3335.0
+Nigeria,18-24,Bachelor's degree,6.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2026,2563.0
+Kenya,25-34,"Some university, no degree",4.0,3.0,Hybrid,100-499,Freelancer or self-employed,Full-stack developer,1,2026,4170.0
+Egypt,25-34,Bachelor's degree,6.0,2.0,Hybrid,Under 20,Employed,Full-stack developer,0,2026,16618.0
+Nigeria,18-24,"Some university, no degree",5.0,4.0,Remote,Under 20,Employed,Full-stack developer,0,2026,2636.0
+South Africa,25-34,"Some university, no degree",20.0,12.0,Remote,100-499,Employed,Full-stack developer,0,2026,71697.0
+Kenya,25-34,"Some university, no degree",7.0,6.0,In-person,"500-4,999",Employed,Mobile developer,0,2026,9267.0
+South Africa,25-34,Bachelor's degree,10.0,8.0,Hybrid,"500-4,999",Freelancer or self-employed,Other tech role,1,2026,28679.0
+South Africa,18-24,Secondary or less,8.0,5.0,Remote,Under 20,Employed,Full-stack developer,1,2026,25094.0
+Ethiopia,25-34,Bachelor's degree,17.0,7.0,Remote,100-499,Employed,Back-end developer,0,2026,27883.0
+Egypt,18-24,Bachelor's degree,4.0,1.0,Hybrid,Under 20,Employed,Back-end developer,0,2026,3957.0
+Egypt,25-34,Bachelor's degree,10.0,9.0,Remote,100-499,Freelancer or self-employed,Full-stack developer,0,2026,1385.0
+Egypt,18-24,Bachelor's degree,5.0,1.0,Remote,Under 20,Employed,Back-end developer,1,2026,5935.0
+Ghana,25-34,Bachelor's degree,5.0,4.0,Remote,Under 20,Employed,Other tech role,0,2026,2060.0
+Nigeria,25-34,Bachelor's degree,3.0,1.0,Hybrid,"500-4,999",Freelancer or self-employed,Front-end developer,1,2026,1465.0
+Nigeria,25-34,Secondary or less,5.0,15.0,Hybrid,100-499,Employed,Other tech role,0,2026,110462.0
+Egypt,25-34,Bachelor's degree,4.0,3.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2026,10208.0
+Kenya,18-24,"Some university, no degree",3.0,1.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2026,7722.0
+Morocco,18-24,"Some university, no degree",6.0,5.0,In-person,Under 20,Employed,Back-end developer,1,2026,10234.0
+South Africa,25-34,Bachelor's degree,12.0,9.0,In-person,100-499,Employed,Data or AI,0,2026,11950.0
+Other African country,25-34,Bachelor's degree,9.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2026,1600.0
+Morocco,25-34,"Some university, no degree",8.0,6.0,Hybrid,20-99,Employed,Back-end developer,0,2026,31726.0
+Other African country,25-34,Bachelor's degree,10.0,8.0,Hybrid,"5,000+",Employed,Other tech role,0,2026,1000.0
+Kenya,25-34,Bachelor's degree,15.0,5.0,Hybrid,"500-4,999",Employed,Full-stack developer,1,2026,25000.0
+Kenya,25-34,Master's degree,14.0,9.0,Hybrid,20-99,Employed,Full-stack developer,0,2026,18533.0
+Nigeria,25-34,Bachelor's degree,9.0,3.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2026,2197.0
+Kenya,25-34,"Some university, no degree",8.0,8.0,Remote,Under 20,Employed,Full-stack developer,1,2026,60000.0
+Nigeria,25-34,Bachelor's degree,3.0,3.0,Hybrid,20-99,Employed,Back-end developer,1,2026,732.0
+Kenya,25-34,Bachelor's degree,6.0,8.0,Hybrid,"500-4,999",Employed,Data or AI,1,2026,30889.0
+Other African country,25-34,Bachelor's degree,7.0,7.0,Hybrid,"500-4,999",Employed,Data or AI,0,2026,25000.0
+Kenya,25-34,Bachelor's degree,2.0,8.0,Hybrid,Under 20,Employed,Full-stack developer,1,2026,2317.0
+Morocco,18-24,Master's degree,5.0,1.0,Hybrid,Under 20,Employed,Front-end developer,0,2026,3838.0
+South Africa,25-34,Bachelor's degree,16.0,7.0,In-person,Under 20,Employed,Other tech role,0,2026,21509.0
+Tunisia,25-34,Master's degree,7.0,3.0,Remote,20-99,Employed,Full-stack developer,0,2026,16842.0
+South Africa,25-34,"Some university, no degree",15.0,10.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2026,45647.0
+Nigeria,25-34,Bachelor's degree,9.0,4.0,Remote,Under 20,Freelancer or self-employed,Back-end developer,0,2026,2710.0
+Morocco,25-34,Master's degree,9.0,5.0,In-person,20-99,Employed,Full-stack developer,0,2026,1919.0
+Algeria,25-34,Bachelor's degree,6.0,6.0,Remote,Under 20,Employed,Mobile developer,1,2026,23982.0
+Kenya,25-34,Bachelor's degree,17.0,9.0,In-person,100-499,Employed,Full-stack developer,0,2026,23167.0
+Kenya,25-34,Bachelor's degree,3.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Data or AI,0,2026,24000.0
+Morocco,18-24,Associate degree,3.0,1.0,Hybrid,Under 20,Employed,Back-end developer,1,2026,5117.0
+South Africa,25-34,Bachelor's degree,7.0,3.0,Remote,100-499,Employed,Full-stack developer,1,2026,26528.0
+Other African country,25-34,Bachelor's degree,12.0,7.0,In-person,100-499,Employed,Other tech role,1,2026,19074.0
+South Africa,25-34,Bachelor's degree,16.0,11.0,Remote,100-499,Employed,Front-end developer,0,2026,122483.0
+Kenya,25-34,Bachelor's degree,8.0,6.0,Hybrid,20-99,Employed,Full-stack developer,1,2026,20016.0
+Kenya,25-34,Bachelor's degree,8.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2026,6023.0
+Other African country,25-34,Master's degree,8.0,3.0,Hybrid,100-499,Employed,Other tech role,0,2026,7000.0
+Nigeria,25-34,"Some university, no degree",6.0,5.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2026,1099.0
+Ethiopia,25-34,Bachelor's degree,6.0,4.0,Remote,100-499,Employed,Full-stack developer,1,2026,45600.0
+Tunisia,25-34,Master's degree,10.0,7.0,Hybrid,20-99,Freelancer or self-employed,Other tech role,1,2026,19334.0
+Egypt,25-34,Bachelor's degree,8.0,6.0,In-person,Under 20,Employed,Other tech role,0,2026,10446.0
+Nigeria,18-24,Bachelor's degree,6.0,4.0,Remote,Under 20,Employed,Full-stack developer,1,2026,114000.0
+Kenya,25-34,Bachelor's degree,4.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,0,2026,3861.0
+Nigeria,18-24,"Some university, no degree",6.0,4.0,Remote,Under 20,Employed,Full-stack developer,0,2026,4394.0
+Morocco,25-34,Bachelor's degree,4.0,3.0,Hybrid,Under 20,Employed,Back-end developer,0,2026,5000.0
+Nigeria,25-34,Bachelor's degree,8.0,7.0,Remote,100-499,Freelancer or self-employed,Mobile developer,0,2026,30000.0
+Nigeria,18-24,Bachelor's degree,4.0,3.0,Hybrid,"500-4,999",Employed,Other tech role,0,2026,3515.0
+Kenya,25-34,Bachelor's degree,5.0,5.0,Remote,Freelancer (just me),Freelancer or self-employed,Data or AI,0,2026,10000.0
+Ghana,25-34,"Some university, no degree",2.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2026,2060.0
+Nigeria,25-34,Bachelor's degree,10.0,4.0,Remote,20-99,Employed,Back-end developer,1,2026,26365.0
+South Africa,25-34,Master's degree,15.0,8.0,In-person,Under 20,Employed,Other tech role,0,2026,35849.0
+South Africa,18-24,Bachelor's degree,13.0,2.0,In-person,20-99,Employed,Other tech role,0,2026,31069.0
+Other African country,25-34,Master's degree,10.0,7.0,In-person,20-99,Employed,Mobile developer,0,2026,1212.0
+Nigeria,25-34,Bachelor's degree,5.0,4.0,Remote,20-99,Employed,Mobile developer,1,2026,3515.0
+Nigeria,18-24,Bachelor's degree,3.0,1.0,Hybrid,Under 20,Employed,Full-stack developer,0,2026,2197.0
+Tunisia,25-34,Master's degree,13.0,10.0,In-person,"500-4,999",Employed,Other tech role,0,2026,33953.0
+South Africa,25-34,Bachelor's degree,9.0,5.0,Hybrid,100-499,Employed,Other tech role,0,2026,44512.0
+Kenya,25-34,Bachelor's degree,7.0,4.0,In-person,20-99,Employed,Other tech role,1,2026,2780.0
+South Africa,25-34,Bachelor's degree,14.0,10.0,Hybrid,"500-4,999",Employed,Full-stack developer,0,2026,65722.0
+Egypt,25-34,Bachelor's degree,18.0,14.0,Remote,20-99,Freelancer or self-employed,Full-stack developer,0,2026,25333.0
+South Africa,25-34,Bachelor's degree,14.0,10.0,Hybrid,20-99,Employed,Back-end developer,0,2026,119495.0
+Other African country,25-34,"Some university, no degree",10.0,9.0,Remote,Under 20,Employed,Full-stack developer,0,2026,9150.0
+Nigeria,18-24,Bachelor's degree,4.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Front-end developer,1,2026,732.0
+Other African country,25-34,Bachelor's degree,12.0,5.0,Hybrid,20-99,Employed,Back-end developer,0,2026,11338.0
+Nigeria,18-24,Bachelor's degree,2.0,3.0,In-person,20-99,Employed,Back-end developer,0,2026,879.0
+Nigeria,25-34,Secondary or less,9.0,8.0,Hybrid,20-99,Employed,Other tech role,0,2026,20000.0
+South Africa,25-34,Bachelor's degree,6.0,2.0,In-person,Under 20,Employed,Other tech role,0,2026,1553.0
+Nigeria,25-34,Bachelor's degree,13.0,11.0,Remote,Under 20,Freelancer or self-employed,Mobile developer,1,2026,90000.0
+South Africa,25-34,Bachelor's degree,10.0,4.0,In-person,100-499,Employed,Full-stack developer,0,2026,30651.0
+Algeria,25-34,Bachelor's degree,8.0,5.0,Remote,Under 20,Employed,Full-stack developer,1,2026,11242.0
+South Africa,25-34,"Some university, no degree",9.0,7.0,Remote,Freelancer (just me),Employed,Full-stack developer,0,2026,26289.0
+Ghana,25-34,Bachelor's degree,12.0,10.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,1,2026,2575.0
+Ghana,18-24,"Some university, no degree",5.0,2.0,Hybrid,20-99,Employed,Back-end developer,0,2026,2060.0
+Nigeria,18-24,Secondary or less,4.0,2.0,Remote,Under 20,Freelancer or self-employed,Other tech role,1,2026,3000.0
+Nigeria,18-24,Bachelor's degree,7.0,2.0,Remote,Under 20,Employed,Back-end developer,0,2026,2197.0
+South Africa,25-34,Master's degree,15.0,10.0,Hybrid,100-499,Employed,Mobile developer,0,2026,71697.0
+Nigeria,25-34,Bachelor's degree,6.0,4.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2026,1758.0
+Other African country,25-34,"Some university, no degree",16.0,10.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2026,13605.0
+South Africa,25-34,Bachelor's degree,20.0,13.0,Remote,100-499,Employed,Full-stack developer,1,2026,93206.0
+Egypt,25-34,Bachelor's degree,6.0,1.0,In-person,20-99,Employed,Other tech role,1,2026,4649.0
+Nigeria,25-34,Bachelor's degree,12.0,10.0,In-person,20-99,Employed,Other tech role,1,2026,23802.0
+Ethiopia,25-34,"Some university, no degree",2.0,1.0,Remote,Freelancer (just me),Freelancer or self-employed,Other tech role,1,2026,2000.0
+Nigeria,25-34,"Some university, no degree",2.0,1.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2026,1465.0
+South Africa,25-34,Bachelor's degree,10.0,5.0,Hybrid,"500-4,999",Employed,Data or AI,1,2026,43018.0
+Morocco,18-24,Master's degree,4.0,1.0,Hybrid,100-499,Employed,Other tech role,1,2026,18123.0
+Egypt,25-34,Bachelor's degree,7.0,3.0,Hybrid,Under 20,Employed,Full-stack developer,0,2026,7122.0
+Morocco,18-24,Master's degree,6.0,2.0,Remote,"5,000+",Employed,Full-stack developer,0,2026,14072.0
+Nigeria,25-34,Bachelor's degree,10.0,7.0,Remote,Under 20,Employed,Full-stack developer,0,2026,10985.0
+Kenya,18-24,Bachelor's degree,4.0,1.0,Hybrid,Under 20,Freelancer or self-employed,Full-stack developer,0,2026,927.0
+Ghana,18-24,Bachelor's degree,3.0,1.0,Hybrid,Freelancer (just me),Freelancer or self-employed,Other tech role,0,2026,1459.0
+Egypt,25-34,Bachelor's degree,8.0,5.0,Hybrid,100-499,Employed,Back-end developer,0,2026,18794.0
+Nigeria,25-34,Bachelor's degree,7.0,4.0,Remote,Under 20,Employed,Back-end developer,0,2026,36618.0
+Ghana,25-34,Bachelor's degree,7.0,5.0,Remote,Under 20,Freelancer or self-employed,Other tech role,0,2026,124800.0
+Nigeria,25-34,Bachelor's degree,5.0,3.0,Hybrid,Under 20,Employed,Mobile developer,1,2026,1933.0
+Kenya,18-24,Bachelor's degree,5.0,4.0,Hybrid,Under 20,Freelancer or self-employed,Other tech role,0,2026,3243.0
+Kenya,18-24,Bachelor's degree,5.0,1.0,In-person,100-499,Employed,Mobile developer,1,2026,1575.0
+Kenya,25-34,Bachelor's degree,10.0,3.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,0,2026,46333.0
+Other African country,25-34,Associate degree,7.0,6.0,Hybrid,20-99,Employed,Other tech role,1,2026,11210.0
+South Africa,25-34,Associate degree,3.0,3.0,Remote,Freelancer (just me),Freelancer or self-employed,Data or AI,1,2026,5000.0
+South Africa,25-34,Bachelor's degree,9.0,5.0,Hybrid,Under 20,Employed,Full-stack developer,0,2026,35849.0
+Morocco,25-34,Bachelor's degree,19.0,12.0,Remote,Under 20,Employed,Other tech role,0,2026,8955.0
+Other African country,18-24,Bachelor's degree,4.0,2.0,Hybrid,Under 20,Freelancer or self-employed,Data or AI,0,2026,67333.0
+Tunisia,25-34,Master's degree,3.0,1.0,Hybrid,100-499,Employed,Full-stack developer,1,2026,6400.0
+Nigeria,25-34,"Some university, no degree",6.0,4.0,Remote,Freelancer (just me),Employed,Full-stack developer,0,2026,5126.0
+Egypt,25-34,"Some university, no degree",10.0,5.0,Remote,Under 20,Employed,Full-stack developer,0,2026,11395.0
+Ethiopia,25-34,Bachelor's degree,3.0,3.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,0,2026,600.0
+Nigeria,25-34,Bachelor's degree,5.0,3.0,Hybrid,100-499,Employed,Full-stack developer,1,2026,2417.0
+Nigeria,18-24,Bachelor's degree,6.0,2.0,Remote,Under 20,Employed,Mobile developer,0,2026,3076.0
+Egypt,25-34,Bachelor's degree,6.0,5.0,Remote,20-99,Employed,Back-end developer,1,2026,19784.0
+Nigeria,25-34,Bachelor's degree,4.0,3.0,Remote,Under 20,Employed,Full-stack developer,0,2026,1465.0
+Kenya,25-34,Bachelor's degree,10.0,6.0,Hybrid,"5,000+",Employed,Full-stack developer,1,2026,25020.0
+Tunisia,25-34,Master's degree,6.0,4.0,In-person,Under 20,Employed,Full-stack developer,0,2026,10105.0
+Other African country,25-34,Bachelor's degree,3.0,1.0,Hybrid,20-99,Employed,Other tech role,1,2026,1386.0
+Nigeria,25-34,Master's degree,12.0,5.0,Remote,Under 20,Employed,Full-stack developer,1,2026,2197.0
+Nigeria,18-24,Bachelor's degree,4.0,2.0,Hybrid,"500-4,999",Employed,Back-end developer,0,2026,1556.0
+South Africa,25-34,Associate degree,12.0,10.0,Remote,100-499,Employed,Back-end developer,1,2026,48396.0
+Kenya,25-34,Bachelor's degree,5.0,3.0,Hybrid,20-99,Employed,Full-stack developer,1,2026,14827.0
+Other African country,25-34,Bachelor's degree,4.0,2.0,Remote,Under 20,Freelancer or self-employed,Full-stack developer,1,2026,866.0
+Kenya,25-34,Bachelor's degree,15.0,10.0,Remote,100-499,Freelancer or self-employed,Full-stack developer,1,2026,60000.0
+Nigeria,25-34,Bachelor's degree,2.0,2.0,Remote,Freelancer (just me),Freelancer or self-employed,Back-end developer,1,2026,879.0
+Other African country,25-34,"Some university, no degree",9.0,6.0,In-person,"500-4,999",Employed,Other tech role,1,2026,16000.0
+Nigeria,18-24,Secondary or less,6.0,3.0,Remote,Under 20,Employed,Full-stack developer,0,2026,879.0
+Nigeria,18-24,"Some university, no degree",5.0,1.0,Hybrid,20-99,Employed,Front-end developer,0,2026,820.0
+Kenya,25-34,Bachelor's degree,5.0,2.0,Remote,20-99,Freelancer or self-employed,Data or AI,0,2026,26259.0
+Nigeria,25-34,Bachelor's degree,11.0,5.0,Remote,100-499,Freelancer or self-employed,Other tech role,0,2026,87600.0
+Nigeria,18-24,Bachelor's degree,4.0,2.0,Hybrid,20-99,Employed,Full-stack developer,0,2026,1099.0
+Nigeria,25-34,Bachelor's degree,6.0,5.0,Remote,Under 20,Employed,Other tech role,1,2026,3515.0
+Nigeria,18-24,"Some university, no degree",6.0,4.0,Remote,Under 20,Employed,Back-end developer,0,2026,2563.0
+Nigeria,25-34,Bachelor's degree,3.0,2.0,Hybrid,Under 20,Employed,Data or AI,0,2026,2783.0
+Egypt,25-34,Bachelor's degree,7.0,5.0,Remote,20-99,Employed,Full-stack developer,1,2026,38000.0
+Nigeria,25-34,"Some university, no degree",6.0,5.0,Remote,20-99,Freelancer or self-employed,Other tech role,0,2026,9887.0
+Nigeria,25-34,Bachelor's degree,7.0,4.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2026,2929.0
+Nigeria,25-34,Bachelor's degree,2.0,1.0,Remote,Freelancer (just me),Freelancer or self-employed,Full-stack developer,0,2026,2636.0
+Nigeria,18-24,Bachelor's degree,3.0,2.0,Remote,20-99,Employed,Back-end developer,0,2026,4570.0
