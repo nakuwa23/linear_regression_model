@@ -12,3 +12,6 @@ summative/FlutterApp/.idea/
 
 # OS
 .DS_Store
+
+# Raw Stack Overflow survey files
+summative/linear_regression/stackoverflow_20*.csv
