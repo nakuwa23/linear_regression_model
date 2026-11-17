@@ -31,7 +31,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://linear-regression-model-api.onrender.com",
+        "https://digital-skills-pay-api.onrender.com",
         "http://localhost:5000",
         "http://127.0.0.1:5000",
     ],
