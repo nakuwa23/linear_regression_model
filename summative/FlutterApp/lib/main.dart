@@ -258,7 +258,7 @@ class _PredictionPageState extends State<PredictionPage> {
             ? 'Use one of: ${field.options!.join(', ')}'
             : null;
       case InputKind.yesNo:
-        return _yesNoToInt(text) == null ? 'Type yes or no' : null;
+        return _yesNoToInt(text) == null ? 'Type Yes or No' : null;
       case InputKind.number:
       case InputKind.wholeNumber:
         final number = num.tryParse(text);
