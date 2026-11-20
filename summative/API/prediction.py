@@ -1,6 +1,5 @@
 """FastAPI service that predicts annual pay (USD) for young African developers."""
 
-from io import BytesIO
 from pathlib import Path
 from typing import Literal
 
@@ -10,15 +9,11 @@ import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field
-from sklearn.metrics import mean_squared_error
+
+from retrain import FEATURES, retrain_model
 
 BASE_DIR = Path(__file__).resolve().parent
 MODEL_PATH = BASE_DIR / "best_model.pkl"
-
-NUMERIC = ["YearsCode", "WorkExp", "OnlineCourses", "SurveyYear"]
-CATEGORICAL = ["Country", "AgeGroup", "Education", "WorkMode", "OrgSize", "EmploymentType", "RoleGroup"]
-FEATURES = NUMERIC + CATEGORICAL
-TARGET = "AnnualPayUSD"
 
 model = joblib.load(MODEL_PATH)
 
@@ -28,6 +23,11 @@ app = FastAPI(
     version="1.0.0",
 )
 
+# CORS: only these browser origins may call the API -- the deployed Swagger UI and the
+# Flutter web debug server on this machine. Any other website is blocked by the browser.
+# Methods are limited to GET (docs) and POST (/predict, /retrain), and the only custom
+# header needed is Content-Type for JSON. Credentials are off because the API uses no
+# cookies or auth. The Flutter mobile app is not a browser, so CORS does not affect it.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -71,6 +71,7 @@ class PayInput(BaseModel):
 
 
 def predict_pay(row: pd.DataFrame) -> float:
+    """Same function as the notebook: model predicts log(1 + pay), expm1 converts back to USD."""
     return float(np.expm1(model.predict(row)[0]))
 
 
@@ -87,34 +88,8 @@ def predict(data: PayInput):
 
 @app.post("/retrain")
 async def retrain(file: UploadFile = File(..., description="CSV with the same columns as data.csv")):
+    """Uploading a CSV triggers retraining (logic in retrain.py); /predict uses the result at once."""
     try:
-        new = pd.read_csv(BytesIO(await file.read()))
-    except Exception:
-        raise HTTPException(status_code=400, detail="File is not a readable CSV.")
-
-    missing = [c for c in FEATURES + [TARGET] if c not in new.columns]
-    if missing:
-        raise HTTPException(status_code=400, detail=f"Missing columns: {missing}")
-
-    # Same rules as the notebook: drop incomplete rows and implausible pay
-    new = new[FEATURES + [TARGET]].dropna()
-    new = new[new[TARGET].between(600, 300_000)]
-    if new.empty:
-        raise HTTPException(status_code=400, detail="No valid rows after cleaning.")
-
-    X_new = model.named_steps["preprocessor"].transform(new[FEATURES])
-    y_new = np.log1p(new[TARGET])
-    sgd = model.named_steps["model"]
-    mse_before = mean_squared_error(y_new, sgd.predict(X_new))
-
-    for _ in range(20):
-        sgd.partial_fit(X_new, y_new)
-    mse_after = mean_squared_error(y_new, sgd.predict(X_new))
-
-    joblib.dump(model, MODEL_PATH)
-    return {
-        "message": "Model retrained with partial_fit and now in use.",
-        "rows_used": int(len(new)),
-        "mse_on_new_data_before": round(mse_before, 4),
-        "mse_on_new_data_after": round(mse_after, 4),
-    }
+        return retrain_model(model, await file.read(), MODEL_PATH)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
