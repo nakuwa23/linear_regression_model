@@ -1,7 +1,7 @@
 # Digital Skills Pay Estimator
 
 ## Mission and problem
-My mission is to equip youth in underserved African communities with the skills and pathways to become self-reliant.
+My mission is to equip youth in underserved African communities with the skills and pathways they need to become self-reliant.
 Young African developers rarely know what their skills are worth or which learning and work pathways raise their pay.
 This project predicts the annual pay (USD) a developer aged 18–34 can expect, so young people and youth skills programmes can set realistic goals.
 
