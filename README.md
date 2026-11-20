@@ -10,6 +10,8 @@ This project predicts the annual pay (USD) a developer aged 18–34 can expect, 
 
 Source: [Stack Overflow Developer Survey](https://survey.stackoverflow.co/)
 
+Raw survey files: [2026](https://github.com/StackExchange/Survey/blob/main/packages/archive/2026/survey_results_public.csv), [2025](https://github.com/StackExchange/Survey/blob/main/packages/archive/2025/results.csv), [2024](https://github.com/StackExchange/Survey/blob/main/packages/archive/2024/results.csv), [2023](https://github.com/StackExchange/Survey/blob/main/packages/archive/2023/results.csv)
+
 ## API (Swagger UI)
 **https://digital-skills-pay-api.onrender.com/docs**
 
