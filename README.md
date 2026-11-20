@@ -76,3 +76,8 @@ linear_regression_model/
     │   └── best_model.pkl       # saved SGDRegressor pipeline
     └── FlutterApp/              # Flutter mobile app
 ```
+
+## Limitations
+- Survey respondents are self-selected developers who are already online, so predictions describe young Africans already on a digital-skills pathway rather than all African youth.
+- Pay is self-reported, and several countries have few respondents, so they are grouped as "Other African country".
+- On Render's free plan, a model retrained through `/retrain` is lost when the service restarts or sleeps; it then reloads the committed `best_model.pkl`.
